@@ -1,6 +1,7 @@
 from . import app
+from . import db
 from flask import render_template,Flask,redirect,session,url_for,flash,request
-from app.forms import LoginForm
+from app.forms import LoginForm, RegistrationForm
 from app.models import User
 from flask_login import current_user,login_user,logout_user,login_required
 from werkzeug.urls import  url_parse
@@ -40,6 +41,18 @@ def logout():
     logout_user()
     flash('You have been logged out.')
     return redirect(url_for('index'))
+
+@app.route('/register',methods=['GET','POST'])
+def register():
+    form=RegistrationForm()
+    if form.validate_on_submit():
+        user=User(email=form.email.data,
+                  username=form.username.data,
+                  password=form.password.data)
+        db.session.add(user)
+    return render_template('register.html',title='Register' ,form=form)
+
+
 
 @app.route('/secret')
 @login_required

@@ -12,7 +12,7 @@ class LoginForm(FlaskForm):
 class RegistrationForm(FlaskForm):
     email=StringField('Email',validators=[DataRequired(),Length(1,64),Email()])
     username=StringField('Username',validators=[
-            DataRequired(),Length(1,64),Regexp(r'^\w*[\w-]$',0,
+            DataRequired(),Length(1,64),Regexp(r'^[a-zA-Z]+[a-zA-Z0-9_.]*$',0,
                                                'Usernames must have only letters,'
                                                 'numbers ,dots or underscores')])
     password=PasswordField('Password',validators=[
