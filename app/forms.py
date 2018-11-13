@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
 from wtforms.validators import Required, DataRequired, ValidationError, Email, EqualTo ,Regexp, Length
 from app.models import User
 
@@ -27,3 +27,12 @@ class RegistrationForm(FlaskForm):
     def validata_username(self,filed):
         if User.query.filter_by(username=filed.data).first():
             raise ValidationError('Username alread in use!')
+
+
+class EditProfileForm(FlaskForm):
+    username=StringField('Username',validators=[
+            DataRequired(),Length(1,64),Regexp(r'^[a-zA-Z]+[a-zA-Z0-9_.]*$',0,
+                                               'Usernames must have only letters,'
+                                                'numbers ,dots or underscores')])
+    about_me=TextAreaField('About me',validators=[Length(0,1024)])
+    submit=SubmitField('Submit')
