@@ -1,6 +1,6 @@
 from . import app
 from . import db
-from flask import render_template,Flask,redirect,session,url_for,flash,request
+from flask import render_template,Flask,redirect,session,url_for,flash,request,abort
 from app.forms import LoginForm, RegistrationForm
 from app.models import User
 from flask_login import current_user,login_user,logout_user,login_required
@@ -18,6 +18,7 @@ def index():
 
 @app.route('/login',methods=['GET','POST'])
 def login():
+    #先确保没有登录
     if current_user.is_authenticated:
         return redirect(url_for('index'))
     form=LoginForm()
@@ -44,13 +45,31 @@ def logout():
 
 @app.route('/register',methods=['GET','POST'])
 def register():
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
     form=RegistrationForm()
     if form.validate_on_submit():
         user=User(email=form.email.data,
                   username=form.username.data,
                   password=form.password.data)
         db.session.add(user)
+        db.session.commit()
+        flash('You can now login.')
+        return redirect(url_for('login'))
     return render_template('register.html',title='Register' ,form=form)
+
+
+@app.route('/user/<username>')
+@login_required
+def user(username):
+    user=User.query.filter_by(username=username).first()
+    posts = [
+        {'author': user, 'body': 'Test post #1'},
+        {'author': user, 'body': 'Test post #2'}
+    ]
+    if user is None:
+        abort(404)
+    return render_template('user.html',user=user,posts=posts)
 
 
 
