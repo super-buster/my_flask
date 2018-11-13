@@ -3,6 +3,10 @@ from app import db
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 from . import login
+from hashlib import md5
+from flask import request
+
+
 class User(UserMixin,db.Model):
     __tablename__= 'user'
     id = db.Column(db.Integer, primary_key=True)
@@ -20,8 +24,15 @@ class User(UserMixin,db.Model):
     def password(self,password):
         self.password_hash=generate_password_hash(password)
 
+    #验证密码
     def verify_password(self,password):
         return check_password_hash(self.password_hash,password)
+
+    def gravatar(self,size=648,default='identicon',rating='g'):
+        url='http://www.gravatar.com/avatar'
+        hash=md5(self.email.encode('utf-8')).hexdigest()
+        return '{url}/{hash}?s={size}&d={default}&r={rating}'.format(
+            url=url,hash=hash,size=size,default=default,rating=rating        )
 
 
     def __repr__(self):
