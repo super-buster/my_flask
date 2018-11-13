@@ -7,12 +7,15 @@ from hashlib import md5
 from flask import request
 
 
+
 class User(UserMixin,db.Model):
     __tablename__= 'user'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
+    about_me=db.Column(db.Text())
+    last_seen=db.Column(db.DateTime(),default=datetime.utcnow)
     #一对多的关系：dynamic (不加载记录,但提供加载记录的查询)
     posts=db.relationship('Post',backref='author',lazy='dynamic')
 
