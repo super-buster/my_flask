@@ -19,4 +19,11 @@ class RegistrationForm(FlaskForm):
             DataRequired(),EqualTo('password2',message='Password must match.')])
     password2=PasswordField('Confirm password',validators=[DataRequired()])
     submit=SubmitField('Register')
-    
+
+    def validata_email(self,filed):
+        if User.query.filter_by(email=filed.data).fist():
+            raise ValidationError('Email alread registered!')
+
+    def validata_username(self,filed):
+        if User.query.filter_by(username=filed.data).first():
+            raise ValidationError('Username alread in use!')
