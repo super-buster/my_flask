@@ -20,12 +20,12 @@ class RegistrationForm(FlaskForm):
     password2=PasswordField('Confirm password',validators=[DataRequired()])
     submit=SubmitField('Register')
 
-    def validata_email(self,filed):
-        if User.query.filter_by(email=filed.data).fist():
+    def validata_email(self,username):
+        if User.query.filter_by(email=username.data).fist():
             raise ValidationError('Email alread registered!')
 
-    def validata_username(self,filed):
-        if User.query.filter_by(username=filed.data).first():
+    def validata_username(self,email):
+        if User.query.filter_by(email=email.data).first():
             raise ValidationError('Username alread in use!')
 
 
@@ -36,3 +36,14 @@ class EditProfileForm(FlaskForm):
                                                 'numbers ,dots or underscores')])
     about_me=TextAreaField('About me',validators=[Length(0,1024)])
     submit=SubmitField('Submit')
+
+    #继承Flask的__init__方法
+    def __init__(self,original_username,*args,**kwargs):
+        super(EditProfileForm, self).__init__(*args,**kwargs)
+        self.original_username=original_username
+
+    def validate_username(self,username):
+        if username.data!=self.original_username:
+            user=User.query.filter_by(username=self.username.data).first
+            if user is not None:
+                raise ValidationError('Please use a different username')

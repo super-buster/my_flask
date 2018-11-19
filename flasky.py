@@ -7,5 +7,3 @@ def make_shell_context():
     return dict(db=db, User=User, Post=Post)
 manage.add_command("shell",Shell(make_context=make_shell_context))
 
-if __name__ == '__main__':
-    app.run(debug=True)
