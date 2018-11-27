@@ -46,6 +46,17 @@ class User(UserMixin,db.Model):
         return '{url}/{hash}?s={size}&d={default}&r={rating}'.format(
             url=url,hash=hash,size=size,default=default,rating=rating        )
 
+    def follow(self,user):
+        if not self.is_following(user):
+            self.followed.append(user)
+
+    def unfollow(self,user):
+        if self.is_following(user):
+            self.followed.remove(user)
+
+    def is_following(self,user):
+        return self.followed.filter(followers.c.followed_id==user.id).count()>0
+
 
     def __repr__(self):
         return '<User {}>'.format(self.username)
