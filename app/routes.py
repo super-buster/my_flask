@@ -105,7 +105,7 @@ def follow(username):
     return redirect(url_for('user',username=username))
 
 @app.route('/unfollow/<username>')
-@app.login_required
+@login_required
 def unfollow(username):
     user=User.query.filter_by(username=username).first()
     if user is None:

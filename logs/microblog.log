@@ -87,3 +87,7 @@ sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed
 2018-11-28 00:11:10,702 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:48]
 2018-11-29 10:34:48,137 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:48]
 2018-11-29 11:02:51,520 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:48]
+2018-11-29 12:27:45,873 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:48]
+2018-11-29 12:28:25,128 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:48]
+2018-11-29 12:29:48,130 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:48]
+2018-11-29 12:32:00,635 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:48]
