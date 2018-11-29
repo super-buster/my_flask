@@ -49,5 +49,5 @@ class EditProfileForm(FlaskForm):
                 raise ValidationError('Please use a different username')
 
 class PostForm(FlaskForm):
-    post=TextAreaField('Say something',validators=[DataRequired,Length(0,1024)])
+    post=TextAreaField('Say something',validators=[DataRequired(),Length(0,1024)])
     submit=SubmitField('Submit')
