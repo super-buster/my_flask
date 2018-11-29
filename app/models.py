@@ -54,6 +54,7 @@ class User(UserMixin,db.Model):
         if self.is_following(user):
             self.followed.remove(user)
 
+    #是否是user的粉丝
     def is_following(self,user):
         return self.followed.filter(followers.c.followed_id==user.id).count()>0
 
