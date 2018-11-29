@@ -58,3 +58,4 @@ Traceback (most recent call last):
     validator(form, self)
 TypeError: __init__() takes from 1 to 2 positional arguments but 3 were given
 2018-11-29 15:27:27,364 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:48]
+2018-11-29 16:48:19,297 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:48]
