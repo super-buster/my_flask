@@ -99,14 +99,27 @@ def follow(username):
     if user==current_user:
         flash('You can not follow yourself!')
         return redirect(url_for('user',username=username))
+    current_user.follow(user)
+    db.session.commit()
+    flash('You are following {}!'.format(username))
+    return redirect(url_for('user',username=username))
 
+@app.route('/unfollow/<username>')
+@app.login_required
+def unfollow(username):
+    user=User.query.filter_by(username=username).first()
+    if user is None:
+        flash('User {} not found.'.format(username))
+        return redirect(url_for('index'))
+    if user==current_user:
+        flash('You cannot unfollow youself!')
+        return redirect(url_for('user',username=username))
+    current_user.unfollow(user)
+    db.session.commit()
+    flash('You are not following {}.'.format(username))
+    return redirect(url_for('user',username=username))
 
-
-
-
-
-
-
+#动态获取用户登录的最后时间
 @app.before_request
 def before_request():
     if current_user.is_authenticated:
