@@ -41,10 +41,10 @@ class User(UserMixin,db.Model):
         return check_password_hash(self.password_hash,password)
 
     def gravatar(self,size=648,default='identicon',rating='g'):
-        url='http://www.gravatar.com/avatar'
+        url='https://www.gravatar.com/avatar'
         hash=md5(self.email.encode('utf-8')).hexdigest()
         return '{url}/{hash}?s={size}&d={default}&r={rating}'.format(
-            url=url,hash=hash,size=size,default=default,rating=rating        )
+            url=url,hash=hash,size=size,default=default,rating=rating)
 
     def follow(self,user):
         if not self.is_following(user):
@@ -57,6 +57,12 @@ class User(UserMixin,db.Model):
     def is_following(self,user):
         return self.followed.filter(followers.c.followed_id==user.id).count()>0
 
+    def followed_posts(self):
+        followed = Post.query.join(
+            followers, (followers.c.followed_id == Post.user_id)).filter(
+                followers.c.follower_id == self.id)
+        own = Post.query.filter_by(user_id=self.id)
+        return followed.union(own).order_by(Post.timestamp.desc())
 
     def __repr__(self):
         return '<User {}>'.format(self.username)

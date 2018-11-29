@@ -21,7 +21,7 @@ class RegistrationForm(FlaskForm):
     submit=SubmitField('Register')
 
     def validata_email(self,username):
-        if User.query.filter_by(email=username.data).fist():
+        if User.query.filter_by(email=username.data).first():
             raise ValidationError('Email alread registered!')
 
     def validata_username(self,email):
