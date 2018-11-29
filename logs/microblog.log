@@ -60,3 +60,44 @@ TypeError: __init__() takes from 1 to 2 positional arguments but 3 were given
 2018-11-29 15:27:27,364 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:48]
 2018-11-29 16:48:19,297 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:48]
 2018-11-29 22:54:40,222 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:48]
+2018-11-29 23:04:11,672 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:48]
+2018-11-29 23:04:14,672 ERROR: Exception on /explore [GET] [in /home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/kaori/Desktop/flasky/app/routes.py", line 129, in explore
+    return render_template('index.html',title='Explore',posts=posts)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/kaori/Desktop/flasky/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/kaori/Desktop/flasky/app/templates/base.html", line 31, in top-level template code
+    {% block content %}
+  File "/home/kaori/Desktop/flasky/app/templates/index.html", line 19, in block "content"
+    {% include '_post.html' %}
+  File "/home/kaori/Desktop/flasky/app/templates/_post.html", line 3, in top-level template code
+    <td><img src="{{ post.author.avatar(36) }}"></td>
+jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'avatar'
+2018-11-29 23:05:05,838 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:48]
