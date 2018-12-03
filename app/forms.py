@@ -52,9 +52,9 @@ class PostForm(FlaskForm):
     post=TextAreaField('Say something',validators=[DataRequired(),Length(0,1024)])
     submit=SubmitField('Submit')
 
-class RestPasswordRequestForm(FlaskForm):
-    email=StringField('Email',validators=[DataRequired(),Email()])
-    submit=SubmitField('Request Password Reset')
+class ResetPasswordRequestForm(FlaskForm):
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    submit = SubmitField('Request Password Reset')
 
 class RestPasswordForm(FlaskForm):
     password=PasswordField('Password',validators=[DataRequired()])
