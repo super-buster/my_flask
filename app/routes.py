@@ -1,7 +1,7 @@
 from . import app
 from . import db
 from flask import render_template,Flask,redirect,session,url_for,flash,request,abort
-from app.forms import LoginForm, RegistrationForm , EditProfileForm,PostForm,RestPasswordRequestForm
+from app.forms import LoginForm, RegistrationForm , EditProfileForm,PostForm,RestPasswordRequestForm,RestPasswordForm
 from app.models import User,Post
 from app.email import send_password_reset_email
 from flask_login import current_user,login_user,logout_user,login_required
@@ -151,6 +151,21 @@ def reset_password_request():
             flash('Check your email for the instructions to reset your password')
             return redirect(url_for('login'))
         return render_template('reset_password_request.html',title='Reset password',form=form)
+
+@app.route('/reset_password/<token>',methods=['GET','POST'])
+def reset_password(token):
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
+    user=User.verify_reset_password_token(token)
+    if not user:
+        return redirect(url_for('index'))
+    form= RestPasswordForm()
+    if form.validate_on_submit():
+        user.password=form.password.data
+        db.session.commit()
+        flash('Your password has been reset.')
+        return redirect(url_for('login'))
+    return render_template('reset_password.html',form=form)
 
 
 #动态获取用户登录的最后时间
