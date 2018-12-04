@@ -114,3 +114,4 @@ werkzeug.routing.BuildError: Could not build url for endpoint 'auth.password_res
 2018-12-04 13:28:54,189 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:52]
 2018-12-04 13:38:11,608 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:52]
 2018-12-04 13:38:51,694 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:52]
+2018-12-04 16:24:43,952 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:52]
