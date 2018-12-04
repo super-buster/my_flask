@@ -99,3 +99,5 @@ smtplib.SMTPDataError: (554, b'DT:SPM 163 smtp14,EsCowADHm1nFBwVc5WW4Cw--.23891S
 2018-12-03 22:39:26,532 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:52]
 2018-12-04 10:36:25,586 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:52]
 2018-12-04 12:08:06,711 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:52]
+2018-12-04 12:51:16,381 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:52]
+2018-12-04 12:57:03,042 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:52]
