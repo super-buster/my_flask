@@ -8,6 +8,7 @@ from flask_login import LoginManager
 from flask_mail import Mail
 from flask_moment import Moment
 from flask_babel import Babel
+from flask import request
 import logging
 from logging.handlers import SMTPHandler ,RotatingFileHandler
 import os
@@ -55,6 +56,8 @@ if not app.debug:
     app.logger.info('Microblog startup')
 
 
-
+@babel.localeselector
+def get_locale():
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 from app import routes,models,forms,errors
