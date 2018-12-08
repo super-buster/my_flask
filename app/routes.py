@@ -1,13 +1,23 @@
 from . import app
 from . import db
-from flask import render_template,Flask,redirect,session,url_for,flash,request,abort
+from flask import render_template,Flask,redirect,session,url_for,flash,request,abort,g
 from app.forms import LoginForm, RegistrationForm , EditProfileForm,PostForm,ResetPasswordRequestForm,RestPasswordForm
 from app.models import User,Post
 from app.email import send_password_reset_email
 from flask_login import current_user,login_user,logout_user,login_required
 from werkzeug.urls import  url_parse
 from datetime import datetime
-from flask_babel import _
+from flask_babel import _, get_locale
+
+
+#动态获取用户登录的最后时间
+@app.before_request
+def before_request():
+    if current_user.is_authenticated:
+        current_user.last_seen=datetime.utcnow()
+        db.session.commit()
+    g.local=str(get_locale())
+
 
 @app.route('/',methods=['GET','POST'])
 @app.route('/index',methods=['GET','POST'])
@@ -169,13 +179,6 @@ def reset_password(token):
         return redirect(url_for('login'))
     return render_template('reset_password.html',form=form)
 
-
-#动态获取用户登录的最后时间
-@app.before_request
-def before_request():
-    if current_user.is_authenticated:
-        current_user.last_seen=datetime.utcnow()
-        db.session.commit()
 
 @app.route('/secret')
 @login_required

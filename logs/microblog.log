@@ -49,3 +49,4 @@ Traceback (most recent call last):
 jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'avatar'
 2018-12-07 00:04:28,212 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:56]
 2018-12-07 00:14:15,877 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
+2018-12-07 12:04:00,750 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
