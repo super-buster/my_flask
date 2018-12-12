@@ -8,7 +8,7 @@ from flask_login import current_user,login_user,logout_user,login_required
 from werkzeug.urls import  url_parse
 from datetime import datetime
 from flask_babel import _, get_locale
-
+from guess_language import guess_language
 
 #动态获取用户登录的最后时间
 @app.before_request
@@ -25,7 +25,10 @@ def before_request():
 def index():
     form=PostForm()
     if form.validate_on_submit():
-        post=Post(body=form.post.data,author=current_user)
+        language=guess_language(form.post.data)
+        if language=='UNKNOWN' or len(language)>5:
+            language=''
+        post=Post(body=form.post.data,author=current_user,language=language)
         db.session.add(post)
         db.session.commit()
         flash(_('You post is now live!'))
