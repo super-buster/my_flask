@@ -14,3 +14,4 @@ class Config(object):
         'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     LANGUAGES=['en','es','zh_CN']
+    MS_TRANSLATOR_KEY=os.environ.get('MS_TRANSLATOR_KEY')
