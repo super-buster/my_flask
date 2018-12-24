@@ -79,3 +79,4 @@ jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'ava
 2018-12-12 12:20:18,394 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
 2018-12-12 12:20:36,880 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
 2018-12-12 12:59:03,944 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
+2018-12-24 09:25:37,542 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
