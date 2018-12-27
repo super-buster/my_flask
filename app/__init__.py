@@ -13,7 +13,6 @@ import logging
 from logging.handlers import SMTPHandler ,RotatingFileHandler
 import os
 
-
 app = Flask(__name__)
 app.config.from_object(Config)
 bootstrap=Bootstrap(app)
@@ -26,6 +25,9 @@ login.login_message = _l('Please log in to access this page.')
 mail=Mail(app)
 moment=Moment(app)
 babel=Babel(app)
+
+from app.errors import bp as errors_bp
+app.register_blueprint(errors_bp)
 
 if not app.debug:
     if app.config['MAIL_SERVER']:
@@ -61,4 +63,4 @@ if not app.debug:
 def get_locale():
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
-from app import routes,models,forms,errors
+from app import routes,models,forms
