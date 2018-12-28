@@ -1,4 +1,68 @@
-2018-12-07 00:04:19,017 ERROR: Exception on /index [GET] [in /home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py:1761]
+2018-12-28 12:31:28,987 ERROR: Exception on /login [GET] [in /home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/werkzeug/routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 1713, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 1644, in handle_http_exception
+    return handler(e)
+  File "/home/kaori/Desktop/flasky/app/errors/handlers.py", line 8, in not_found_error
+    return render_template('errors/404.html'), 404
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/kaori/Desktop/flasky/app/templates/errors/404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/kaori/Desktop/flasky/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block "body"
+    {% block navbar %}
+  File "/home/kaori/Desktop/flasky/app/templates/base.html", line 17, in block "navbar"
+    <a class="navbar-brand" href="{{ url_for('index') }}">Microblog</a>
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
+2018-12-28 12:31:34,859 ERROR: Exception on /auth/login [GET] [in /home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,10 +76,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/kaori/Desktop/flasky/app/routes.py", line 29, in index
-    next_url=next_url,prev_url=prev_url)
+  File "/home/kaori/Desktop/flasky/app/auth/routes.py", line 30, in login
+    return render_template('auth/login.html',title='Sign in',form=form)
   File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
     context, ctx.app)
   File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
@@ -28,7 +90,7 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "/home/kaori/Desktop/flasky/app/templates/index.html", line 2, in top-level template code
+  File "/home/kaori/Desktop/flasky/app/templates/auth/login.html", line 2, in top-level template code
     {% import 'bootstrap/wtf.html' as wtf %}
   File "/home/kaori/Desktop/flasky/app/templates/base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
@@ -38,56 +100,25 @@ Traceback (most recent call last):
     {%- block html %}
   File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
     {% block body -%}
-  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
-    {% block content -%}
-  File "/home/kaori/Desktop/flasky/app/templates/base.html", line 48, in block "content"
-    {% block app_content %} {% endblock %}
-  File "/home/kaori/Desktop/flasky/app/templates/index.html", line 11, in block "app_content"
-    {% include '_post.html' %}
-  File "/home/kaori/Desktop/flasky/app/templates/_post.html", line 5, in top-level template code
-    <img src="{{ post.author.gravatar(70) }}" />
-jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'avatar'
-2018-12-07 00:04:28,212 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:56]
-2018-12-07 00:14:15,877 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-07 12:04:00,750 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-08 21:26:38,926 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-08 21:29:32,658 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-08 21:32:08,619 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-08 21:40:00,395 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-08 21:40:41,818 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-08 23:52:37,503 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 00:04:20,537 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 00:05:23,311 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 00:05:29,971 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 00:05:55,057 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 00:06:48,181 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 00:06:50,272 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 00:13:35,247 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 00:13:43,801 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 00:14:16,351 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 00:16:30,241 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 00:16:57,076 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 00:17:31,853 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 00:20:45,365 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 00:31:53,440 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 00:32:23,434 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 00:41:42,645 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:58]
-2018-12-09 00:42:53,783 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 01:08:20,090 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 11:08:24,198 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-09 11:10:13,157 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-12 12:20:18,394 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-12 12:20:36,880 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-12 12:59:03,944 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-24 09:25:37,542 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-24 09:28:02,963 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-24 09:29:03,828 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-24 09:29:11,940 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-24 09:31:01,652 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-24 09:38:37,464 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:57]
-2018-12-25 23:33:03,579 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:56]
-2018-12-25 23:33:44,545 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:56]
-2018-12-25 23:33:50,605 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:56]
-2018-12-27 23:10:53,321 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:59]
-2018-12-27 23:11:16,095 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:59]
-2018-12-27 23:11:19,755 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:59]
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block "body"
+    {% block navbar %}
+  File "/home/kaori/Desktop/flasky/app/templates/base.html", line 17, in block "navbar"
+    <a class="navbar-brand" href="{{ url_for('index') }}">Microblog</a>
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
+2018-12-28 12:35:35,535 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:65]
+2018-12-28 12:43:39,494 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:65]
+2018-12-28 12:44:32,310 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:65]
+2018-12-28 14:28:24,191 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:65]
+2018-12-28 14:29:03,104 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:65]
+2018-12-28 15:00:16,864 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:65]
+2018-12-28 15:00:49,654 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:65]
