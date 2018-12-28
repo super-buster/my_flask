@@ -1,6 +1,6 @@
 from . import app
 from . import db
-from flask import render_template,Flask,redirect,session,url_for,flash,request,abort,g
+from flask import render_template,Flask,redirect,session,url_for,flash,request,abort,g,jsonify
 from app.forms import LoginForm, RegistrationForm , EditProfileForm,PostForm,ResetPasswordRequestForm,RestPasswordForm
 from app.models import User,Post
 from app.email import send_password_reset_email
@@ -9,7 +9,7 @@ from werkzeug.urls import  url_parse
 from datetime import datetime
 from flask_babel import _, get_locale
 from guess_language import guess_language
-
+from app.translate import translate
 #动态获取用户登录的最后时间
 @app.before_request
 def before_request():
@@ -148,8 +148,8 @@ def explore():
     page=request.args.get('page',1,type=int)
     posts=Post.query.order_by(Post.timestamp.desc()).paginate(
         page, app.config['POSTS_PER_PAGE'],False)
-    next_url = url_for('index', page=posts.next_num) if posts.has_next else None
-    prev_url = url_for('index', page=posts.prev_num) if posts.has_prev else None
+    next_url = url_for('explore', page=posts.next_num) if posts.has_next else None
+    prev_url = url_for('explore', page=posts.prev_num) if posts.has_prev else None
     return render_template('index.html',title='Explore',posts=posts.items,
                            next_url=next_url,prev_url=prev_url)
 
@@ -182,6 +182,12 @@ def reset_password(token):
         return redirect(url_for('login'))
     return render_template('reset_password.html',form=form)
 
+@app.route('/translate',methods=['POST'])
+@login_required
+def translate_text():
+    return jsonify({'text':translate(request.form['text'],
+                                     request.form['source_language'],
+                                     request.form['dest_language'])})
 
 @app.route('/secret')
 @login_required
