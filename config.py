@@ -1,5 +1,8 @@
 import os
+from dotenv import load_dotenv
+
 basedir=os.path.abspath(os.path.dirname(__file__)) #获得当前文件（比如配置文件）所在的路径
+load_dotenv(os.path.join(basedir,'.env'))
 
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
