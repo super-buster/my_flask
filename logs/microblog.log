@@ -42,3 +42,5 @@ Traceback (most recent call last):
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.BuildError: Could not build url for endpoint 'reset_password' with values ['token']. Did you mean 'auth.reset_password' instead?
 2018-12-31 20:49:58,888 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:75]
+2018-12-31 21:01:15,305 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:75]
+2018-12-31 21:03:13,400 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:75]
