@@ -50,3 +50,8 @@ werkzeug.routing.BuildError: Could not build url for endpoint 'reset_password' w
 2019-01-01 00:44:39,895 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:75]
 2019-01-01 00:44:56,373 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:75]
 2019-01-01 00:45:26,625 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:75]
+2019-01-01 00:47:29,982 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:75]
+2019-01-01 00:47:57,376 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:75]
+2019-01-01 00:48:53,789 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:75]
+2019-01-01 00:49:00,309 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:75]
+2019-01-01 00:49:59,028 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:75]

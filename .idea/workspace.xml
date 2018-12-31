@@ -97,8 +97,8 @@
       <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="120">
+              <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -109,8 +109,8 @@
       <file leaf-file-name=".flaskenv" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.flaskenv">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="26" selection-start-column="26" selection-end-column="26" />
+            <state relative-caret-position="120">
+              <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -185,16 +185,16 @@
         <option value="$PROJECT_DIR$/app/templates/errors/404.html" />
         <option value="$PROJECT_DIR$/app/templates/email/reset_password.txt" />
         <option value="$PROJECT_DIR$/app/templates/email/reset_password.html" />
-        <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/.flaskenv" />
+        <option value="$PROJECT_DIR$/config.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="290" />
-    <option name="y" value="148" />
-    <option name="width" value="1784" />
-    <option name="height" value="1051" />
+    <option name="x" value="301" />
+    <option name="y" value="140" />
+    <option name="width" value="1671" />
+    <option name="height" value="1115" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -333,13 +333,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541501276500</updated>
-    </task>
-    <task id="LOCAL-00051" summary="Redesigned 404 error template">
-      <created>1543897249721</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1543897249721</updated>
     </task>
     <task id="LOCAL-00052" summary="Redesigned 505 error template">
       <created>1543897456468</created>
@@ -677,7 +670,14 @@
       <option name="project" value="LOCAL" />
       <updated>1546260712837</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Import a .env file with environment variables.">
+      <created>1546274832755</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1546274832755</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -695,14 +695,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="226" y="282" width="1784" height="1051" extended-state="0" />
+    <frame x="295" y="83" width="1671" height="1115" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21294719" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22754854" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067294" side_tool="true" weight="0.28033474" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.21506551" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.2010204" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.32900944" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932706" weight="0.2996159" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -789,7 +789,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix language in flask.g(g.locale --&gt; g.__local)" />
     <MESSAGE value="Set locale for moment.js" />
     <MESSAGE value="Translate command group" />
     <MESSAGE value="update and commpile sub-commands" />
@@ -814,7 +813,8 @@
     <MESSAGE value="register custom application commands.&#10;main application module refactored." />
     <MESSAGE value="fix some bugs." />
     <MESSAGE value="fix bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug" />
+    <MESSAGE value="Import a .env file with environment variables." />
+    <option name="LAST_COMMIT_MESSAGE" value="Import a .env file with environment variables." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -822,13 +822,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ven/lib/python3.6/site-packages/wtforms/validators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="284" column="6" selection-start-line="284" selection-start-column="6" selection-end-line="284" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/common.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
@@ -1129,10 +1122,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app.db">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-707" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="120">
+          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -1141,8 +1139,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.flaskenv">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        <state relative-caret-position="120">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>
