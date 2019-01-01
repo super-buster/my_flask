@@ -13,7 +13,6 @@ class Config(object):
     POSTS_PER_PAGE=25
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
         'sqlite:///' + os.path.join(basedir, 'app.db')
-    conn = psycopg2.connect(os.environ.get('DATABASE_URL'), sslmode='require')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     LANGUAGES=['en','es','zh_CN']
     MS_TRANSLATOR_KEY=os.environ.get('MS_TRANSLATOR_KEY')
