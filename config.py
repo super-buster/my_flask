@@ -15,4 +15,4 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     LANGUAGES=['en','es','zh_CN']
     MS_TRANSLATOR_KEY=os.environ.get('MS_TRANSLATOR_KEY')
-    LOG_TO_STUOUT=os.environ.get('LOG_TO_STUOUT')
+    LOG_TO_STDOUT=os.environ.get('LOG_TO_STDOUT')

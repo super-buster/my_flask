@@ -61,18 +61,23 @@ def creat_app(config_clas=Config):
             mail_handler.setLevel(logging.ERROR)
             app.logger.addHandler(mail_handler)
 
-        if not os.path.exists('logs'):
-            os.mkdir('logs')
-        file_handler = RotatingFileHandler('logs/microblog.log', maxBytes=10240,
-                                           backupCount=10)
-        #设置时间，日志级别，用户输出的信息，调用日志输出函数的模块的文件名，所在的代码行
-        file_handler.setFormatter(logging.Formatter(
-            '%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]'))
-        file_handler.setLevel(logging.INFO)
-        app.logger.addHandler(file_handler)
+        if app.config['LOG_TO_STDOUT']:
+            stream_handler=logging.StreamHandler()
+            stream_handler.setLevel(logging.INFO)
+            app.logger.addHandler(stream_handler)
+        else:
+            if not os.path.exists('logs'):
+                os.mkdir('logs')
+            file_handler = RotatingFileHandler('logs/microblog.log', maxBytes=10240,
+                                               backupCount=10)
+            #设置时间，日志级别，用户输出的信息，调用日志输出函数的模块的文件名，所在的代码行
+            file_handler.setFormatter(logging.Formatter(
+                '%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]'))
+            file_handler.setLevel(logging.INFO)
+            app.logger.addHandler(file_handler)
 
-        app.logger.setLevel(logging.INFO)
-        app.logger.info('Microblog startup')
+            app.logger.setLevel(logging.INFO)
+            app.logger.info('Microblog startup')
     return app
 
 @babel.localeselector
