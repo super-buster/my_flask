@@ -26,7 +26,7 @@ babel=Babel()
 
 def creat_app(config_clas=Config):
     app = Flask(__name__)
-    app.config.from_object(Config)
+    app.config.from_object(config_clas)
 
     db.init_app(app)
     migrate.init_app(app,db)
