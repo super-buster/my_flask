@@ -1,5 +1,5 @@
 from datetime import datetime
-from flask import render_template,redirect,request,url_for,flash,request,g, \
+from flask import render_template,redirect,url_for,flash,request,g, \
     jsonify,current_app
 from flask_login import current_user,login_required
 from flask_babel import _, get_locale
