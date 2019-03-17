@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from datetime import datetime
 from flask import render_template,redirect,url_for,flash,request,g, \
     jsonify,current_app

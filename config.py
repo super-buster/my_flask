@@ -1,5 +1,5 @@
+# -*- coding: utf-8 -*-
 import os
-import psycopg2
 basedir=os.path.abspath(os.path.dirname(__file__)) #获得当前文件（比如配置文件）所在的路径
 
 class Config(object):

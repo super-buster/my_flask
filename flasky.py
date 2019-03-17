@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from app import db,creat_app,cli
 from app.models import User,Post
 
