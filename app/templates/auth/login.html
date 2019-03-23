@@ -1,23 +1,70 @@
 {% extends 'base.html' %}
 {% import 'bootstrap/wtf.html' as wtf %}
 
+<head>
+
+</head>
+
 
 {% block app_content %}
     <div class=" jumbotron ">
         <h1 style="text-align:center">Welcome To Your Blog</h1>
-        <p style="text-align:center"><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-    </div>
-
-    <h1>{{ _('Sign In') }}</h1>
-    <div class="row">
-        <div class="col-md-4">
-            {{ wtf.quick_form(form) }}
+        <div style="text-align:center">
+        <small> powered by  </small>
+        <span class="label label-primary">Flask</span>
+        <span class="label label-primary">Bootstrap</span>
+        <span class="label label-primary">Gunicorn</span>
+        <span class="label label-primary">nginx</span>
+        <span class="label label-primary">supervisor</span>
         </div>
     </div>
-    <br>
-    <p>{{ _('New User?') }} <a href="{{ url_for('auth.register') }}">{{ _('Click to Register!') }}</a></p>
-    <p>
-        {{ _('Forgot Your Password?') }}
-        <a href="{{ url_for('auth.reset_password_request') }}">{{ _('Click to Reset It') }}</a>
-    </p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Please Sign In</h3>
+                    </div>
+                    <div class="panel-body"  style="text-align:center;clear:both;margin:30px auto;">
+                        <form role="form" action="login" method="post">
+                            <field>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="username" name="username" type="username" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="" name="password" type="password" value="">
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                    </label>
+                                </div>
+                                <!-- Change this to a button or input when using this as a form -->
+                                <button type="submit" class="btn btn-success">Log In</button>
+                                <br>
+                                <p>{{ _('New User?') }} <a href="{{ url_for('auth.register') }}">{{ _('Click to Register!') }}</a></p>
+                                <p>
+                                    {{ _('Forgot Your Password?') }}
+                                    <a href="{{ url_for('auth.reset_password_request') }}">{{ _('Click to Reset It') }}</a>
+                                </p>
+                            </field>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<footer class="bd-footer text-muted" style="text-align:center;clear:both;margin:30px auto;">
+  <div class="container-fluid p-3 p-md-5">
+    <ul class="bd-footer-links">
+      <li><a href="https://github.com/super-buster">GitHub</a></li>
+      <li><a href="#">Examples</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <p>thanks to <a href="https://twitter.com/FezVrasta" target="_blank" rel="noopener">@FezVrasta</a> and <a href="https://github.com/FezVrasta/bootstrap-material-design/graphs/contributors">other contributors</a>.</p>
+  </div>
+</footer>
+
 {% endblock %}

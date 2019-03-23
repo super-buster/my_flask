@@ -1,12 +1,23 @@
 {% extends 'bootstrap/base.html' %}
 
-{% block title %}
-    {% if title %}{{ title }} - Microblog{% else %}{{ _('Welcome to Microblog') }}{% endif %}
-{% endblock %}
+<head>
+ 	{% block head %}
+    {{ super() }}
+
+	{% block metas %}
+    {{ super() }}
+	{% endblock %}
+
+	{% block styles %}
+    {{ super() }}
+	{% endblock %}
+
+
+	{% endblock %}
+</head>>
 
 {% block navbar %}
     <nav class="navbar navbar-default">
-        <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
@@ -22,9 +33,9 @@
                 <li class="active"><a href="{{ url_for('main.index') }}">Home <span class="sr-only">(current)</span></a></li>
                 <li><a href="{{ url_for('main.explore') }}">Home</a></li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Themes <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
+                    <li><a href="#">sbadmin2</a></li>
                     <li><a href="#">Another action</a></li>
                     <li><a href="#">Something else here</a></li>
                     <li role="separator" class="divider"></li>
@@ -89,6 +100,9 @@
         {% block app_content %}{% endblock %}
     </div>
 {% endblock %}
+
+{%block footer%}
+{%endblock%}
 
 {% block scripts %}
     {{ super() }}
