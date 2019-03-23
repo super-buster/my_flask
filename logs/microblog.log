@@ -1,8 +1,53 @@
-2019-01-12 15:16:38,934 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:80]
-2019-01-12 16:23:31,343 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:80]
-2019-01-12 16:29:51,894 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:80]
-2019-03-17 17:02:44,478 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:80]
-2019-03-17 17:02:44,478 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:80]
-2019-03-17 17:02:44,478 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:80]
-2019-03-17 17:02:44,478 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:80]
-2019-03-17 17:19:59,916 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:80]
+2019-03-23 18:02:30,417 ERROR: Exception on /auth/login [GET] [in /home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kaori/Desktop/flasky/app/auth/routes.py", line 22, in login
+    return render_template('auth/login.html', title=_('Sign In'), **locals())
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/kaori/Desktop/flasky/app/templates/auth/login.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/kaori/Desktop/flasky/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/home/kaori/Desktop/flasky/app/templates/base.html", line 100, in block "content"
+    {% block app_content %}{% endblock %}
+  File "/home/kaori/Desktop/flasky/app/templates/auth/login.html", line 67, in block "app_content"
+    <p>Currently v{{ site.current_version }}. Code licensed <a rel="license noopener" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license noopener" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+  File "/home/kaori/Desktop/flasky/ven/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'site' is undefined
+2019-03-23 18:03:14,005 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:81]
+2019-03-23 18:05:08,927 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:81]
+2019-03-23 18:05:26,025 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:81]
+2019-03-23 18:06:12,725 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:81]
+2019-03-23 18:10:18,434 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:81]
+2019-03-23 18:11:20,977 INFO: Microblog startup [in /home/kaori/Desktop/flasky/app/__init__.py:81]
