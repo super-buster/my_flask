@@ -2,34 +2,83 @@
 from datetime import datetime
 from app import db ,login
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import UserMixin
+from flask_login import UserMixin, AnonymousUserMixin , LoginManager
 from . import login
 from hashlib import md5
 from time import time
 from flask import current_app
 import jwt
 
+class Permission:
+    FOLLOW=0x01
+    COMMENT=0x02
+    WRITE_ARTICLES=0x04
+    MODERATE_COMMENT=0x08
+    ADMINISTER=0x80
+
 followers = db.Table('followers',
                      db.Column('follower_id', db.Integer, db.ForeignKey('user.id')),
                      db.Column('followed_id', db.Integer, db.ForeignKey('user.id'))
                      )
 
+class Role(db.Model):
+    __tablename__='roles'
+    id=db.Column(db.Integer,primary_key=True)
+    name=db.Column(db.String(64),unique=True)
+    default=db.Column(db.Boolean,default=False,index=True)
+    permissions=db.Column(db.Integer)
+    user=db.relationship('User',backref='role',lazy='dynamic') #一个role对应多个user
+
+    @staticmethod
+    #使用几种权限组合成一个role
+    def insert_roles():
+        roles={
+            'User':(Permission.FOLLOW |
+                    Permission.COMMENT|
+                    Permission.WRITE_ARTICLES,True),
+            'Moderate':(Permission.FOLLOW |
+                    Permission.COMMENT|
+                    Permission.WRITE_ARTICLES|
+                    Permission.MODERATE_COMMENT,False),
+            'Administrator':(0xff,False)
+        }
+        #自动把所有Role（3个）添加进数据库
+        for r in roles:
+            role=Role.query.filter_by(name=r).first()
+            if role is None: #没有就创建一个ROLE
+                role=Role(name=r)
+            role.permissions=roles[r][0]
+            role.default=roles[r][1]
+            db.session.add(role)
+        db.session.commit()
+
+    def __repr__(self):
+        return '<Role %r>' % self.name
+
 class User(UserMixin,db.Model):
     __tablename__= 'user'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
+    role_id=db.Column(db.Integer,db.ForeignKey('roles.id'))
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
     about_me=db.Column(db.Text())
     last_seen=db.Column(db.DateTime(),default=datetime.utcnow)
     #一对多的关系：dynamic (不加载记录,但提供加载记录的查询)
     posts=db.relationship('Post',backref='author',lazy='dynamic')
-
+  #粉丝
     followed = db.relationship(
         'User', secondary=followers,
         primaryjoin=(followers.c.follower_id == id),
         secondaryjoin=(followers.c.followed_id == id),
         backref=db.backref('followers', lazy='dynamic'), lazy='dynamic')
+
+    def can(self, permissions):
+        return self.role is not None and \
+            (self.role.permissions & permissions) == permissions
+
+    def is_administrator(self):
+        return self.can(Permission.ADMINISTER)
 
     @property
     def password(self):
@@ -81,9 +130,28 @@ class User(UserMixin,db.Model):
             return None
         return User.query.get(id)
 
+    def __init__(self,**kwargs):
+        super(User,self).__init__(**kwargs)
+        if self.role is None:
+            li=[]
+            li.append(self.email)
+            if li==current_app.config['ADMINS']: #好大一个坑，必需要用列表来判断
+                self.role=Role.query.filter_by(permissions=0xff).first()
+            if self.role is None:
+                self.role=Role.query.filter_by(default=True).first()
+        db.session.commit()
 
     def __repr__(self):
         return '<User {}>'.format(self.username)
+
+class AnonymousUser(AnonymousUserMixin):
+    def can(self, permissions):
+        return False
+
+    def is_administrator(self):
+        return False
+
+LoginManager.anonymous_user=AnonymousUser
 
 class Post(db.Model):
     __tablename__='post'

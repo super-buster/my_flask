@@ -2,7 +2,7 @@
 from datetime import datetime, timedelta
 import unittest
 from app import creat_app , db
-from app.models import User, Post
+from app.models import User, Post, Role , Permission,AnonymousUser
 from config import Config
 
 class TestConfig(Config):
@@ -93,6 +93,16 @@ class UserModelCase(unittest.TestCase):
         self.assertEqual(f2, [p2, p3])
         self.assertEqual(f3, [p3, p4])
         self.assertEqual(f4, [p4])
+
+    def test_roles_and_permission(self):
+        Role.insert_roles()
+        u1 =User(username='kongmuqiuren',email='4214221@qq.com',password='4fs141')
+        self.assertTrue(u1.can(Permission.WRITE_ARTICLES))
+        self.assertFalse(u1.can(Permission.MODERATE_COMMENT))
+
+    def test_anonymous_user(self):
+        u=AnonymousUser()
+        self.assertFalse(u.can(Permission.FOLLOW))
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
