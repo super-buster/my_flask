@@ -81,6 +81,14 @@ def creat_app(config_clas=Config):
 
             app.logger.setLevel(logging.INFO)
             app.logger.info('Microblog startup')
+
+    @app.after_request
+    def add_header(response):
+        # response.cache_control.no_store = True
+        if 'Cache-Control' not in response.headers:
+            response.headers['Cache-Control'] = 'no-store'
+        return response
+
     return app
 
 @babel.localeselector
