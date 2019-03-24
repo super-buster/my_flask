@@ -7,6 +7,8 @@ from . import login
 from hashlib import md5
 from time import time
 from flask import current_app
+from markdown import markdown
+import bleach
 import jwt
 
 class Permission:
@@ -157,12 +159,26 @@ class Post(db.Model):
     __tablename__='post'
     id=db.Column(db.Integer,primary_key=True)
     body=db.Column(db.String(140))
+    body_html=db.Column(db.Text)
     timestamp=db.Column(db.DateTime, index=True, default=datetime.utcnow)
     #多的一方通过外键关联到user表
     user_id=db.Column(db.Integer, db.ForeignKey('user.id'))
     language=db.Column(db.String(5))
+
+
+    def on_changed_body(target,value,oldvalue,initiator):
+        allowed_tags = ['a', 'abbr', 'acronym', 'b', 'blockquote', 'code',
+                        'em', 'i', 'li', 'ol', 'pre', 'strong', 'ul',
+                        'h1', 'h2', 'h3', 'p']
+        target.body_html=bleach.linkify(bleach.clean(
+            markdown(value,output_format='html'),
+            tags=allowed_tags,strip=True))
+
     def __repr__(self):
         return '<Post {}'.format(self.body)
+
+db.event.listen(Post.body,'set',Post.on_changed_body)
+
 
 #用户加载函数
 @login.user_loader

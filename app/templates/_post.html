@@ -15,7 +15,15 @@
                     username=user_link, when=moment(post.timestamp).fromNow()) }}
                 <span class="label label-primary">Post</span>
                 <br>
-                <span id="post{{ post.id }}">{{ post.body }}</span>
+
+                <div class="post-body">
+                    {%if post.body_html %}
+                        {{ post.body_html | safe}}
+                    {% else %}
+                        {{ post.body}}
+                    {% endif %}
+                </div>
+
                 {% if post.language and post.language != g.__local %}
                 <br><br>
                  <span id="translation{{ post.id }}">

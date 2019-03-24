@@ -9,6 +9,7 @@ from flask_login import LoginManager
 from flask_mail import Mail
 from flask_moment import Moment
 from flask_babel import Babel, lazy_gettext as _l
+from flask_pagedown import PageDown
 import logging
 from logging.handlers import SMTPHandler ,RotatingFileHandler
 import os
@@ -23,7 +24,7 @@ login.login_message = _l('Please log in to access this page.')
 mail=Mail()
 moment=Moment()
 babel=Babel()
-
+pagedown=PageDown()
 
 def creat_app(config_clas=Config):
     app = Flask(__name__)
@@ -36,6 +37,7 @@ def creat_app(config_clas=Config):
     bootstrap.init_app(app)
     moment.init_app(app)
     babel.init_app(app)
+    pagedown.init_app(app)
 
     from app.errors import bp as errors_bp
     app.register_blueprint(errors_bp)
