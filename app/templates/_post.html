@@ -1,39 +1,44 @@
-    <table class="table table-hover">
-        <tr>
-            <td width="70px">
-                <a href="{{ url_for('main.user', username=post.author.username) }}">
-                    <img src="{{ post.author.gravatar(70) }}" />
-                </a>
-            </td>
-            <td>
-                {% set user_link %}
-                    <a href="{{ url_for('main.user', username=post.author.username) }}">
-                        {{ post.author.username }}
-                    </a>
-                {% endset %}
-                {{ _('%(username)s said %(when)s',
-                    username=user_link, when=moment(post.timestamp).fromNow()) }}
-                <span class="label label-primary">Post</span>
-                <br>
+<ul class="posts">
+    <li class="post">
+        <a href="{{ url_for('main.user', username=post.author.username) }}">
+            <img src="{{ post.author.gravatar(70) }}" />
+        </a>
 
-                <div class="post-body">
+        {% set user_link %}
+        <a href="{{ url_for('main.user', username=post.author.username) }}">
+            {{ post.author.username }}
+        </a>
+        {% endset %}
+
+        {{ _('%(username)s post %(when)s',
+        username=user_link, when=moment(post.timestamp).fromNow()) }}
+        <span class="label label-primary">checked</span>
+        <div class="post-content">
+            <div class="post-body">
                     {%if post.body_html %}
                         {{ post.body_html | safe}}
                     {% else %}
                         {{ post.body}}
                     {% endif %}
-                </div>
+            </div>
 
-                {% if post.language and post.language != g.__local %}
-                <br><br>
-                 <span id="translation{{ post.id }}">
-                    <a href="javascript:translate(
-                                '#post{{ post.id }}',
-                                '#translation{{ post.id }}',
-                                '{{ post.language }}',
-                                '{{ g.locale }}');">{{ _('Translate') }}</a>
-                </span>
+            <div class="post-footer">
+                <a href="{{ url_for('main.post', id=post.id) }}">
+                    <span class="label label-default">Permalink</span>
+                </a>
+
+                {% if (current_user.is_administrator()) %}
+                    <a href="{{ url_for('main.edit', id=post.id) }}">
+                    <span class="label label-danger">Edit [Admin]</span>
+                </a>
+                {% elif current_user==post.author %}
+                <a href="{{ url_for('main.edit', id=post.id) }}">
+                    <span class="label label-primary">Edit</span>
+                </a>
                 {% endif %}
-            </td>
-        </tr>
-    </table>
+
+            </div>
+        </div>
+    </li>
+</ul>
+

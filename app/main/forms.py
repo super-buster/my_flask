@@ -27,7 +27,7 @@ class EditProfileForm(FlaskForm):
                 raise ValidationError(_('Please use a different username'))
 
 class PostForm(FlaskForm):
-    post=PageDownField(_l("What's your mind?"),validators=[DataRequired()])
+    post=PageDownField(_l("What's your mind? (markdown support)"),validators=[DataRequired()])
     submit=SubmitField(_l('Submit'))
 
 class SearchForm(FlaskForm):

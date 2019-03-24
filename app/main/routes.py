@@ -1,16 +1,15 @@
 # -*- coding: utf-8 -*-
 from datetime import datetime
 from flask import render_template,redirect,url_for,flash,request,g, \
-    jsonify,current_app
+    jsonify,current_app,abort
 from flask_login import current_user,login_required
 from flask_babel import _, get_locale
 from guess_language import guess_language
 from app import db
 from app.main.forms import EditProfileForm,PostForm
-from app.models import User,Post
+from app.models import User,Post,Permission,Role
 from app.translate import translate
 from app.main import bp
-
 #动态获取用户登录的最后时间
 @bp.before_request
 def before_request():
@@ -108,6 +107,30 @@ def unfollow(username):
     db.session.commit()
     flash(_('You are not following %(username)s.',username=username))
     return redirect(url_for('main.user',username=username))
+
+
+
+@bp.route('/post/<int:id>',methods=['GET','POST'])
+def post(id):
+        posts=Post.query.get_or_404(id)
+        return render_template('post.html',posts=[posts])
+
+@bp.route('/edit/<int:id>',methods=['GET','POST'])
+@login_required
+def edit(id):
+    post=Post.query.get_or_404(id)
+    if current_user != post.author and not current_user.can(Permission.ADMINISTER):
+        abort(403)
+    form=PostForm()
+    if form.validate_on_submit():
+        post.body=form.post.data
+        db.session.add(post)
+        db.session.commit()
+        flash('The post has been rewrited')
+        return redirect(url_for('main.post',id=post.id))
+    form.post.data=post.body
+    return render_template('edit_post.html',form=form)
+
 
 @bp.route('/translate', methods=['POST'])
 @login_required
