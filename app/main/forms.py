@@ -30,6 +30,10 @@ class PostForm(FlaskForm):
     post=PageDownField(_l("What's your mind? (markdown support)"),validators=[DataRequired()])
     submit=SubmitField(_l('Submit'))
 
+class CommentForm(FlaskForm):
+    body=PageDownField('',validators=[DataRequired()])
+    submit=SubmitField('Submit')
+
 class SearchForm(FlaskForm):
     q = StringField(_l('Search'), validators=[DataRequired()])
 

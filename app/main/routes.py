@@ -6,8 +6,8 @@ from flask_login import current_user,login_required
 from flask_babel import _, get_locale
 from guess_language import guess_language
 from app import db
-from app.main.forms import EditProfileForm,PostForm
-from app.models import User,Post,Permission,Role
+from app.main.forms import EditProfileForm,PostForm,CommentForm
+from app.models import User,Post,Permission,Role,Comment
 from app.translate import translate
 from app.main import bp
 #动态获取用户登录的最后时间
@@ -113,7 +113,21 @@ def unfollow(username):
 @bp.route('/post/<int:id>',methods=['GET','POST'])
 def post(id):
         posts=Post.query.get_or_404(id)
-        return render_template('post.html',posts=[posts])
+        form=CommentForm()
+        if form.validate_on_submit():
+            comment=Comment(body=form.body.data,
+                            post=post,
+                            author_id=current_user._get_current_object().id)
+            db.session.add(comment)
+            db.session.commit()
+            flash('Your comment has been published')
+            return redirect(url_for('main.post',id=post.id))
+        page=request.args.get('page',1,type=int)
+        if page==-1:
+            page=(posts.comments.count()-1)/ current_app.config['COMMENTS_PER_PAGE'] +1
+        pagination=posts.comments.order_by(Comment.timestamp.asc()).paginate(
+                page,current_app.config['COMMENTS_PER_PAGE'], False )
+        return render_template('post.html',posts=[posts],form=form)
 
 @bp.route('/edit/<int:id>',methods=['GET','POST'])
 @login_required
