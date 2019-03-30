@@ -23,9 +23,6 @@
             </div>
 
             <div class="post-footer">
-                <a href="{{ url_for('main.post', id=post.id) }}">
-                    <span class="label label-default">Permalink</span>
-                </a>
 
                 {% if (current_user.is_administrator()) %}
                     <a href="{{ url_for('main.edit', id=post.id) }}">

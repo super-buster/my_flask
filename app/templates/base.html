@@ -66,8 +66,8 @@
                 <ul class="nav navbar-nav navbar-right col-ms3">
                     <ul class="media">
                       <ul class="media-left">
-                        <a href="chained story.mp3">
-                          <img class="media-object" src="#" alt="#">
+                        <a href="/static/audio/chainedstory.mp3">
+                          <img class="media-object" src="/static/icon/play-button.png" alt="#" width="20" height="20">
                         </a>
                       </ul>
                     </ul>
@@ -87,6 +87,12 @@
 
 
 {% block content %}
+    <div>Icons made by
+        <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>
+        from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+    </div>
+
     <div class="container">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -109,3 +115,4 @@
     {{ moment.include_moment() }}
     {{ moment.lang(g.__locale) }}
 {% endblock %}
+

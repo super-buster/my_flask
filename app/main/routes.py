@@ -40,7 +40,7 @@ def index():
     return render_template('index.html', title='Home page', form=form, posts=posts.items,
                            next_url=next_url,prev_url=prev_url)
 
-@bp.route('/explore')
+@bp.route('/explore',methods=['GET','POST'])
 @login_required
 def explore():
     page=request.args.get('page',1,type=int)
@@ -109,25 +109,11 @@ def unfollow(username):
     return redirect(url_for('main.user',username=username))
 
 
+@bp.route('/articles/')
+def article():
+    posts = Post.query.order_by(Post.timestamp.desc())
+    return  render_template('explore.html',posts=posts)
 
-@bp.route('/post/<int:id>',methods=['GET','POST'])
-def post(id):
-        posts=Post.query.get_or_404(id)
-        form=CommentForm()
-        if form.validate_on_submit():
-            comment=Comment(body=form.body.data,
-                            post=post,
-                            author_id=current_user._get_current_object().id)
-            db.session.add(comment)
-            db.session.commit()
-            flash('Your comment has been published')
-            return redirect(url_for('main.post',id=post.id))
-        page=request.args.get('page',1,type=int)
-        if page==-1:
-            page=(posts.comments.count()-1)/ current_app.config['COMMENTS_PER_PAGE'] +1
-        pagination=posts.comments.order_by(Comment.timestamp.asc()).paginate(
-                page,current_app.config['COMMENTS_PER_PAGE'], False )
-        return render_template('post.html',posts=[posts],form=form)
 
 @bp.route('/edit/<int:id>',methods=['GET','POST'])
 @login_required

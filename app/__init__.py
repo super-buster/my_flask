@@ -27,7 +27,7 @@ babel=Babel()
 pagedown=PageDown()
 
 def creat_app(config_clas=Config):
-    app = Flask(__name__)
+    app = Flask(__name__,static_url_path='/static')
     app.config.from_object(config_clas)
 
     db.init_app(app)
