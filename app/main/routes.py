@@ -40,16 +40,6 @@ def index():
     return render_template('index.html', title='Home page', form=form, posts=posts.items,
                            next_url=next_url,prev_url=prev_url)
 
-@bp.route('/explore',methods=['GET','POST'])
-@login_required
-def explore():
-    page=request.args.get('page',1,type=int)
-    posts=Post.query.order_by(Post.timestamp.desc()).paginate(
-        page, current_app.config['POSTS_PER_PAGE'],False)
-    next_url = url_for('main.explore', page=posts.next_num) if posts.has_next else None
-    prev_url = url_for('main.explore', page=posts.prev_num) if posts.has_prev else None
-    return render_template('index.html',title='Explore',posts=posts.items,
-                           next_url=next_url,prev_url=prev_url)
 
 @bp.route('/user/<username>')
 @login_required
@@ -110,9 +100,13 @@ def unfollow(username):
 
 
 @bp.route('/articles/')
-def article():
-    posts = Post.query.order_by(Post.timestamp.desc())
-    return  render_template('explore.html',posts=posts)
+def articles():
+    page = request.args.get('page', 1, type=int)
+    posts = Post.query.order_by(Post.timestamp.desc()).paginate(
+        page, current_app.config['POSTS_PER_PAGE'],False)
+    next_url = url_for('main.articles', page=posts.next_num) if posts.has_next else None
+    prev_url = url_for('main.articles', page=posts.prev_num) if posts.has_prev else None
+    return  render_template('explore.html',posts=posts.items,next_url=next_url,prev_url=prev_url)
 
 
 @bp.route('/edit/<int:id>',methods=['GET','POST'])
@@ -127,9 +121,25 @@ def edit(id):
         db.session.add(post)
         db.session.commit()
         flash('The post has been rewrited')
-        return redirect(url_for('main.post',id=post.id))
+        return redirect(url_for('main.articles',id=post.id))
     form.post.data=post.body
     return render_template('edit_post.html',form=form)
+
+@bp.route('/article/<int:id>',methods=['GET','POST'])
+@login_required
+def article(id):
+    form=CommentForm()
+    p = Post.query.get_or_404(id)
+    if form.validate_on_submit():
+        comment = Comment(body=form.body.data,
+                          post=p,
+                          author=current_user._get_current_object())
+        db.session.add(comment)
+        db.session.commit()
+        flash('Your comment has been published.')
+        return redirect(url_for('main.article',id=id))
+    return render_template('post.html',p=p,id=id,form=form)
+
 
 
 @bp.route('/translate', methods=['POST'])

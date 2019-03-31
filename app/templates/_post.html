@@ -21,7 +21,9 @@
                 <li><span><i class="glyphicon glyphicon-calendar"></i> {{moment(p.timestamp).fromNow()}} </span></li>
                 <li>|</li>
                 <span><i class="glyphicon glyphicon-comment"></i>
-                    {{ _('%(count)d comments', count=p.comments.count()) }}
+                    <a href="{{url_for('main.article',id=p.id)}}" >
+                       {{ _('%(count)d comments', count=p.comments.count()) }}
+                    </a>
                 </span>
                 <li>|</li>
                 <li>
