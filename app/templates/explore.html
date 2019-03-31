@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+<head>
+<% block head%>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<% endblock %>
+</head>
+
+{% block app_content %}
+<div class="posts">
+    <div class="container">
+        {%for p in posts%}
+      <div class="well">
+          <div class="media">
+            <a class="pull-left" href="{{ url_for('main.user', username=p.author.username) }}">
+                <img class="media-object" src="{{ p.author.gravatar(70) }}">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">Post</h4>
+                {% set user_link %}
+                <a href="{{ url_for('main.user', username=p.author.username) }}">
+                    {{ p.author.username }}
+                </a>{% endset %}
+              <p class="text-right">by user: {{ _('%(username)s',username=user_link) }}</p>
+              <p>
+                  {%if p.body_html %}
+                  {{ p.body_html | safe}}
+                  {% else %}
+                  {{ p.body}}
+                  {% endif %}
+              </p>
+              <ul class="list-inline list-unstyled">
+                <li><span><i class="glyphicon glyphicon-calendar"></i> {{moment(p.timestamp).fromNow()}} </span></li>
+                <li>|</li>
+                <span><i class="glyphicon glyphicon-comment"></i>
+                   {{ _('%(count)d comments', count=p.comments.count()) }}
+                </span>
+                <li>|</li>
+                <li>
+                   <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                </li>
+                <li>|</li>
+                <li>
+                <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+                  <span><i class="fa fa-facebook-square"></i></span>
+                  <span><i class="fa fa-twitter-square"></i></span>
+                  <span><i class="fa fa-google-plus-square"></i></span>
+                </li>
+                </ul>
+           </div>
+        </div>
+      </div>
+        {% endfor %}
+
+        <nav aria-label="...">
+        <ul class="pager">
+            <li class="previous{% if not prev_url %} disabled{% endif %}">
+                <a href="{{ prev_url or '#' }}">
+                    <span aria-hidden="true">&larr;</span> {{ _('Newer posts') }}
+                </a>
+            </li>
+            <li class="next{% if not next_url %} disabled{% endif %}">
+                <a href="{{ next_url or '#' }}">
+                    {{ _('Older posts') }} <span aria-hidden="true">&rarr;</span>
+                </a>
+            </li>
+        </ul>
+        </nav>
+
+    </div>
+</div>
+
+{%endblock%}

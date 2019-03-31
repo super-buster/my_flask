@@ -1,40 +1,44 @@
-<ul class="posts">
-    <li class="post">
-        <a href="{{ url_for('main.user', username=post.author.username) }}">
-            <img src="{{ post.author.gravatar(70) }}" />
+<ul class="well">
+    <div class="media">
+        <a class="pull-left" href="{{ url_for('main.user', username=p.author.username) }}">
+            <img class="media-object" src="{{ p.author.gravatar(70) }}">
         </a>
-
-        {% set user_link %}
-        <a href="{{ url_for('main.user', username=post.author.username) }}">
-            {{ post.author.username }}
-        </a>
-        {% endset %}
-
-        {{ _('%(username)s post %(when)s',
-        username=user_link, when=moment(post.timestamp).fromNow()) }}
-        <span class="label label-primary">checked</span>
-        <div class="post-content">
-            <div class="post-body">
-                    {%if post.body_html %}
-                        {{ post.body_html | safe}}
-                    {% else %}
-                        {{ post.body}}
-                    {% endif %}
-            </div>
-
-            <div class="post-footer">
-
-                {% if (current_user.is_administrator()) %}
-                    <a href="{{ url_for('main.edit', id=post.id) }}">
-                    <span class="label label-danger">Edit [Admin]</span>
-                </a>
-                {% elif current_user==post.author %}
-                <a href="{{ url_for('main.edit', id=post.id) }}">
-                    <span class="label label-primary">Edit</span>
-                </a>
+        <div class="media-body">
+            <h4 class="media-heading">Post</h4>
+            {% set user_link %}
+            <a href="{{ url_for('main.user', username=p.author.username) }}">
+                {{ p.author.username }}
+            </a>{% endset %}
+            <p class="text-right">by user: {{ _('%(username)s',username=user_link) }}</p>
+            <p>
+                {%if p.body_html %}
+                {{ p.body_html | safe}}
+                {% else %}
+                {{ p.body}}
                 {% endif %}
-            </div>
+            </p>
+            <ul class="list-inline list-unstyled">
+                <li><span><i class="glyphicon glyphicon-calendar"></i> {{moment(p.timestamp).fromNow()}} </span></li>
+                <li>|</li>
+                <span><i class="glyphicon glyphicon-comment"></i>
+                    {{ _('%(count)d comments', count=p.comments.count()) }}
+                </span>
+                <li>|</li>
+                <li>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </li>
+                <li>|</li>
+                <li>
+                        <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+                    <span><i class="fa fa-facebook-square"></i></span>
+                    <span><i class="fa fa-twitter-square"></i></span>
+                    <span><i class="fa fa-google-plus-square"></i></span>
+                </li>
+            </ul>
         </div>
-    </li>
+    </div>
 </ul>
-

@@ -31,7 +31,7 @@
 
                 <ul class="nav navbar-nav">
                 <li class="active"><a href="{{ url_for('main.index') }}">Home <span class="sr-only">(current)</span></a></li>
-                <li><a href="{{ url_for('main.explore') }}">Explore</a></li>
+                <li><a href="{{ url_for('main.articles') }}">Articles</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Themes <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -87,12 +87,6 @@
 
 
 {% block content %}
-    <div>Icons made by
-        <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>
-        from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-        is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
-    </div>
-
     <div class="container">
         {% with messages = get_flashed_messages() %}
         {% if messages %}

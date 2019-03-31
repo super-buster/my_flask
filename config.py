@@ -10,7 +10,7 @@ class Config(object):
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ADMINS=['424295833@qq.com']
-    POSTS_PER_PAGE=25
+    POSTS_PER_PAGE=3
     COMMENTS_PER_PAGE=5
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
         'sqlite:///' + os.path.join(basedir, 'app.db')
