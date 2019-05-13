@@ -7,8 +7,8 @@
             <div class="comment-author"><a href="{{ url_for('main.user', username=comment.author.username) }}">{{ comment.author.username }}</a></div>
             <div class="comment-date">comment in:  {{ comment.timestamp }}</div>
         </div>
-        <div class="comment-content">
-            <div class="comment-body">
+        <div class="comment-content border-secondary rounded-pill">
+            <div class="comment-body  ">
                 {% if comment.disabled %}
                 <p><i>This comment has been disabled by a moderator.</i></p>
                 {% endif %}

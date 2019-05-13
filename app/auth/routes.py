@@ -14,9 +14,10 @@ def login():
     if request.method=='POST':
         username=request.form.get('username')
         password=request.form.get('password')
+        remember_me=request.form.get('remember-me')
         user = User.query.filter_by(username=username).first()
         if user is not None and user.verify_password(password=password):
-            login_user(user)
+            login_user(user,remember=remember_me)
         else: flash(u'invalid username or password')
         return redirect(url_for('main.index'))
     return render_template('auth/login.html', title=_('Sign In'), **locals())
@@ -45,16 +46,16 @@ def logout():
 def register():
     if current_user.is_authenticated:
         return redirect(url_for('main.index'))
-    form=RegistrationForm()
+    form = RegistrationForm()
     if form.validate_on_submit():
-        user=User(email=form.email.data,
-                  username=form.username.data,
-                  password=form.password.data)
+        user = User(email=form.email.data,
+                    username=form.username.data,
+                    password=form.password.data)
         db.session.add(user)
         db.session.commit()
         flash(_('You can now login.'))
         return redirect(url_for('auth.login'))
-    return render_template('auth/register.html',title='Register' ,form=form)
+    return render_template('auth/register.html', title='Register', form=form)
 
 @bp.route('/reset_password_request', methods=['GET', 'POST'])
 def reset_password_request():

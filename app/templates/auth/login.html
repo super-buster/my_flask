@@ -7,8 +7,16 @@
 
 
 {% block app_content %}
-    <div class=" jumbotron ">
-        <h1 style="text-align:center">Welcome To Your Blog</h1>
+<div class="container">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-info" role="alert">{{ message }}</div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class=" jumbotron " style="background-image: url('/static/img/bg7.jpg');background-size: cover;">
+        <h1 style="text-align:center" >Welcome To Your Blog</h1>
         <div style="text-align:center">
         <small> powered by  </small>
         <span class="label label-primary">Flask</span>
@@ -19,7 +27,6 @@
         </div>
     </div>
 
-    <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
@@ -54,7 +61,7 @@
                 </div>
             </div>
         </div>
-    </div>
+</div>
 
 <footer class="bd-footer text-muted" style="text-align:center;clear:both;margin:30px auto;">
     <div>Icons made by
