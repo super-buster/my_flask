@@ -10,13 +10,24 @@
                 {% if user.last_seen %}
                 <p>{{ _('Last seen on') }}: {{ moment(user.last_seen).format('LLL') }}</p>
                 {% endif %}
-                <p>{{ _('%(count)d followers', count=user.followers.count()) }}, {{ _('%(count)d following', count=user.followed.count()) }}</p>
+                <p>followes: <span class="badge">{{user.followers.count()}}</span> followed: <span class="badge">{{user.followed.count()}}</span></p>
+                {% if  user.followers.count()%}
+                <span>
+                    {% for f in user.followers %}
+                <li>
+                    <a href="{{ url_for('main.user',username=f.username) }}">{{f.username}}</a>
+                </li>
+                {% endfor %}
+                have followed you!
+                </span>
+                {% endif %}
+
                 {% if user == current_user %}
                 <p><a href="{{ url_for('main.edit_profile') }}">{{ _('Edit your profile') }}</a></p>
                 {% elif not current_user.is_following(user) %}
-                <p><a href="{{ url_for('main.follow', username=user.username) }}">{{ _('Follow') }}</a></p>
+                <p><a href="{{ url_for('main.follow', username=user.username) }}"  class="btn btn-primary" >{{ _('Follow') }}</a></p>
                 {% else %}
-                <p><a href="{{ url_for('main.unfollow', username=user.username) }}">{{ _('Unfollow') }}</a></p>
+                <p><a href="{{ url_for('main.unfollow', username=user.username) }}"  class="btn btn-primary">{{ _('Unfollow') }}</a></p>
                 {% endif %}
             </td>
         </tr>
