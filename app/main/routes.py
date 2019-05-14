@@ -140,7 +140,16 @@ def article(id):
         return redirect(url_for('main.article',id=id))
     return render_template('post.html',p=p,id=id,form=form)
 
-
+@bp.route('/article/delete/<int:id>',methods=['POST','GET','DELETE'])
+def article_delete(id):
+    post=Post.query.get_or_404(id)
+    db.session.delete(post)
+    db.session.commit()
+    for comment in post.comments:
+        db.session.delete(comment)
+        db.session.commit()
+    flash('the blog and comments have been deleted')
+    return redirect(url_for('main.articles'))
 
 @bp.route('/translate', methods=['POST'])
 @login_required

@@ -40,6 +40,32 @@
                        {{ _('%(count)d comments', count=p.comments.count()) }}
                    </a>
                 </span>
+
+                  <li>|</li>
+                {% if current_user == p.author %}
+                <li>|</li>
+                <a href="{{url_for('main.edit',id=p.id)}}" >
+                    <span class="glyphicon glyphicon-pencil">edit</span></a>
+                {% elif current_user.is_administrator() %}
+                <a href="{{ url_for('main.edit', id=p.id) }}">
+                    <span class="label label-danger">Edit [Admin]</span>
+                </a>
+                <li>|</li>
+                {% endif %}
+                <li>|</li>
+
+                  {% if current_user == p.author %}
+                <li>|</li>
+                <a href="{{url_for('main.article_delete',id=p.id)}}" >
+                    <span class="glyphicon glyphicon-remove">remove</span></a>
+                {% elif current_user.is_administrator() %}
+                <a href="{{ url_for('main.article_delete', id=p.id) }}">
+                    <span class="label label-danger">Delete [Admin]</span>
+                </a>
+                <li>|</li>
+                {% endif %}
+                <li>|</li>
+
                 <li>|</li>
                 <li>
                    <span class="glyphicon glyphicon-star"></span>
