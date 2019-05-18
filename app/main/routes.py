@@ -156,16 +156,22 @@ def article_delete(id):
 @login_required
 def search():
     if not g.search_form.validate():
-        return redirect(url_for('main.explore'))
+        return redirect(url_for('main.articles'))
     page = request.args.get('page', 1, type=int)
     posts, total = Post.search(g.search_form.q.data, page,
                                current_app.config['POSTS_PER_PAGE'])
-    next_url = url_for('main.search', q=g.search_form.q.data, page=page + 1) \
-        if 1 > page * int(current_app.config['POSTS_PER_PAGE']) else None
-    prev_url = url_for('main.search', q=g.search_form.q.data, page=page - 1) \
-        if page > 1 else None
-    return render_template('search.html', title=_('Search'), posts=posts,
-                           next_url=next_url, prev_url=prev_url)
+    posts = posts.order_by(Post.timestamp.desc())
+    if  not len(posts.all()):
+        flash("No matches")
+        return redirect(url_for('main.articles'))
+    else:
+        next_url = url_for('main.search', q=g.search_form.q.data, page=page + 1) \
+                if 1 > page * int(current_app.config['POSTS_PER_PAGE']) else None
+        prev_url = url_for('main.search', q=g.search_form.q.data, page=page - 1) \
+                if page > 1 else None
+        return render_template('search.html', title=_('Search'), posts=posts,
+                                   next_url=next_url, prev_url=prev_url)
+
 
 @bp.route('/translate', methods=['POST'])
 @login_required
