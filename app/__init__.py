@@ -10,6 +10,7 @@ from flask_mail import Mail
 from flask_moment import Moment
 from flask_babel import Babel, lazy_gettext as _l
 from flask_pagedown import PageDown
+from elasticsearch import Elasticsearch
 import logging
 from logging.handlers import SMTPHandler ,RotatingFileHandler
 import os
@@ -29,7 +30,8 @@ pagedown=PageDown()
 def creat_app(config_clas=Config):
     app = Flask(__name__,static_url_path='/static')
     app.config.from_object(config_clas)
-
+    app.elasticsearch = Elasticsearch([app.config['ELASTICSEARCH_URL']]) \
+        if app.config['ELASTICSEARCH_URL'] else None
     db.init_app(app)
     migrate.init_app(app,db)
     login.init_app(app)

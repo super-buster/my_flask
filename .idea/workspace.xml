@@ -3,158 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a66a5ecd-615f-4cbd-9032-fea443112f3e" name="Default" comment="code:utf-8">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/app.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flasky.py" beforeDir="false" afterPath="$PROJECT_DIR$/flasky.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/microblog.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/microblog.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/alembic.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/script.py.mako" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/97be99ba32e8_post_table.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/ff220964d55c_users_table.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/Flask_Migrate-2.3.0.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/Flask_Migrate-2.3.0.dist-info/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/Flask_Migrate-2.3.0.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/Flask_Migrate-2.3.0.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/Flask_Migrate-2.3.0.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/Flask_Migrate-2.3.0.dist-info/entry_points.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/Flask_Migrate-2.3.0.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/flask_migrate/templates/flask-multidb/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/flask_migrate/templates/flask-multidb/env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/flask_migrate/templates/flask/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/flask_migrate/templates/flask/env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip-18.1.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip-18.1.dist-info/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip-18.1.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip-18.1.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip-18.1.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip-18.1.dist-info/entry_points.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip-18.1.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/build_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/build_env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/cache.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/cli/base_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/cli/base_command.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/cli/cmdoptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/cli/cmdoptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/cli/main_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/cli/main_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/commands/check.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/commands/check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/commands/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/commands/download.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/commands/install.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/commands/install.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/commands/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/commands/list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/commands/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/commands/wheel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/download.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/exceptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/locations.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/locations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/models/candidate.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/models/candidate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/models/format_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/models/format_control.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/models/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/models/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/models/link.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/models/link.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/operations/check.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/operations/check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/operations/freeze.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/operations/freeze.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/operations/prepare.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/operations/prepare.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/pep425tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/pep425tags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/pyproject.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/pyproject.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/req/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/req/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/req/constructors.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/req/constructors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/req/req_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/req/req_file.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/req/req_install.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/req/req_install.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/req/req_set.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/req/req_set.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/req/req_tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/req/req_tracker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/req/req_uninstall.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/req/req_uninstall.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/resolve.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/resolve.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/appdirs.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/appdirs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/deprecation.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/deprecation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/encoding.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/encoding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/filesystem.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/filesystem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/glibc.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/glibc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/hashes.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/hashes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/logging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/misc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/outdated.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/outdated.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/packaging.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/packaging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/temp_dir.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/temp_dir.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/utils/ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/vcs/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/vcs/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/vcs/bazaar.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/vcs/bazaar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/vcs/git.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/vcs/git.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/vcs/mercurial.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/vcs/mercurial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/vcs/subversion.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/vcs/subversion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_internal/wheel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/certifi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/certifi/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/certifi/cacert.pem" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/certifi/cacert.pem" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/certifi/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/certifi/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/colorama/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/colorama/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/colorama/ansitowin32.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/colorama/ansitowin32.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/colorama/initialise.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/colorama/initialise.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/colorama/win32.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/colorama/win32.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/colorama/winterm.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/colorama/winterm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/distlib/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/distlib/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/distlib/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/distlib/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/distlib/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/distlib/locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/distlib/metadata.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/distlib/metadata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/distlib/scripts.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/distlib/scripts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/distlib/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/distlib/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/distlib/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/distlib/wheel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/idna/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/idna/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/idna/idnadata.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/idna/idnadata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/idna/package_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/idna/package_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/idna/uts46data.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/idna/uts46data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/packaging/__about__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/packaging/__about__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/packaging/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/packaging/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/packaging/_compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/packaging/_compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/packaging/_structures.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/packaging/_structures.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/packaging/markers.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/packaging/markers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/packaging/requirements.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/packaging/requirements.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/packaging/specifiers.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/packaging/specifiers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/packaging/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/packaging/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/packaging/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/packaging/version.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pep517/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pep517/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pep517/_in_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pep517/_in_process.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pep517/check.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pep517/check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pep517/colorlog.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pep517/colorlog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pep517/envbuild.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pep517/envbuild.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pep517/wrappers.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pep517/wrappers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pkg_resources/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pkg_resources/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pyparsing.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pyparsing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pytoml/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pytoml/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pytoml/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pytoml/parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pytoml/writer.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/pytoml/writer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/__version__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/__version__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/adapters.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/adapters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/cookies.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/cookies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/help.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/help.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/hooks.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/hooks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/sessions.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/sessions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/status_codes.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/status_codes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/requests/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/six.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/six.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/_collections.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/_collections.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/connection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/connectionpool.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/connectionpool.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/contrib/appengine.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/contrib/appengine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/contrib/ntlmpool.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/contrib/ntlmpool.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/contrib/pyopenssl.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/contrib/pyopenssl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/packages/backports/makefile.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/packages/backports/makefile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/packages/ordered_dict.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/packages/ssl_match_hostname/_implementation.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/packages/ssl_match_hostname/_implementation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/poolmanager.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/poolmanager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/response.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/response.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/util/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/util/connection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/util/response.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/util/response.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/util/retry.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/util/retry.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/util/ssl_.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/util/ssl_.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/util/wait.py" beforeDir="false" afterPath="$PROJECT_DIR$/ven/lib/python3.6/site-packages/pip/_vendor/urllib3/util/wait.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -164,57 +18,42 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="flasky.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flasky.py">
+    <leaf>
+      <file leaf-file-name="search.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/search.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-              <folding>
-                <element signature="e#24#56#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="3">
+              <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/main/__init__.py">
+        <entry file="file://$PROJECT_DIR$/app/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tests.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="98" column="82" selection-start-line="98" selection-start-column="82" selection-end-line="98" selection-end-column="82" />
+            <state relative-caret-position="570">
+              <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
               <folding>
-                <element signature="e#24#64#0" expanded="true" />
+                <element signature="e#24#67#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/auth/routes.py">
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/main/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1408">
-              <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-              <folding>
-                <element signature="e#24#108#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="76">
+              <caret line="24" column="58" lean-forward="true" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models.py">
+      <file leaf-file-name="routes.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/main/routes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2512">
-              <caret line="150" column="31" lean-forward="true" selection-start-line="150" selection-start-column="31" selection-end-line="150" selection-end-column="31" />
+            <state relative-caret-position="289">
+              <caret line="160" column="30" selection-start-line="160" selection-start-column="30" selection-end-line="160" selection-end-column="30" />
               <folding>
                 <element signature="e#24#53#0" expanded="true" />
               </folding>
@@ -222,11 +61,32 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <state relative-caret-position="360">
+              <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4560">
+              <caret line="194" column="27" selection-start-line="194" selection-start-column="27" selection-end-line="194" selection-end-column="27" />
+              <folding>
+                <element signature="e#24#53#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -286,13 +146,11 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/app/templates/errors/404.html" />
         <option value="$PROJECT_DIR$/app/templates/user.html" />
-        <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/app/auth/__init__.py" />
         <option value="$PROJECT_DIR$/app/auth/email.py" />
         <option value="$PROJECT_DIR$/app/errors/handlers.py" />
         <option value="$PROJECT_DIR$/app/errors/__init__.py" />
         <option value="$PROJECT_DIR$/app/main/forms.py" />
-        <option value="$PROJECT_DIR$/app/main/routes.py" />
         <option value="$PROJECT_DIR$/app/cli.py" />
         <option value="$PROJECT_DIR$/app/email.py" />
         <option value="$PROJECT_DIR$/app/translate.py" />
@@ -304,27 +162,27 @@
         <option value="$PROJECT_DIR$/app/templates/pages/index.html" />
         <option value="$PROJECT_DIR$/app/auth/forms.py" />
         <option value="$PROJECT_DIR$/app/auth/routes.py" />
-        <option value="$PROJECT_DIR$/app/templates/base.html" />
         <option value="$PROJECT_DIR$/app/templates/auth/login.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/flasky.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/app/__init__.py" />
-        <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/app/main/__init__.py" />
         <option value="$PROJECT_DIR$/tests.py" />
+        <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/app/models.py" />
+        <option value="$PROJECT_DIR$/app/__init__.py" />
+        <option value="$PROJECT_DIR$/app/templates/base.html" />
+        <option value="$PROJECT_DIR$/app/main/routes.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="274" />
-    <option name="y" value="97" />
-    <option name="width" value="1657" />
-    <option name="height" value="1053" />
+    <option name="x" value="410" />
+    <option name="y" value="285" />
+    <option name="width" value="1758" />
+    <option name="height" value="969" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -341,12 +199,6 @@
               <item name="flasky" type="b2602c69:ProjectViewProjectNode" />
               <item name="flasky" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flasky" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flasky" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flasky" type="b2602c69:ProjectViewProjectNode" />
@@ -840,47 +692,57 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="199" y="168" width="1657" height="1053" extended-state="0" />
+    <frame x="410" y="285" width="1758" height="969" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1499388" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24207492" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010929" side_tool="true" visible="true" weight="0.18082789" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989071" weight="0.3043478" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49967468" weight="0.21444954" />
-      <window_info anchor="bottom" id="Python Console" order="8" weight="0.32900944" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32798165" />
+      <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989071" weight="0.3043478" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1499388" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914925" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32798165" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010929" side_tool="true" visible="true" weight="0.18082789" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49967468" weight="0.21444954" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.32900944" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17316258" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.26206" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932706" weight="0.30043858" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32914925" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.32900944" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3285528" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067294" side_tool="true" weight="0.28033474" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32914925" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.26206" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="bottom" id="Python Console" order="8" weight="0.32900944" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -956,13 +818,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/templates/auth/reset_password_request.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/email/reset_password.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -984,9 +839,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Bt/Kongmu.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../Bt/Kongmu.py" />
     <entry file="file://$PROJECT_DIR$/app/errors/handlers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -998,13 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="3" selection-start-column="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/main/routes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1039,13 +885,6 @@
     <entry file="file://$PROJECT_DIR$/migrations/README">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/main/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-630">
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/user.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1056,20 +895,8 @@
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/dash.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/pages/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="286" column="20" lean-forward="true" selection-start-line="286" selection-start-column="20" selection-end-line="286" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/dash.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/pages/index.html" />
     <entry file="file://$PROJECT_DIR$/app/templates/errors/500.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1077,20 +904,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Bt/app/templates/x.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/themes/sbadmin2/dash.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../Bt/app/templates/x.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/themes/sbadmin2/dash.html" />
     <entry file="file://$PROJECT_DIR$/app/templates/auth/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1102,39 +917,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-          <folding>
-            <element signature="e#543#549#1" expanded="true" />
-            <element signature="e#807#813#1" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/themes/sbadmin2/pages/forms.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="513" column="35" selection-start-line="513" selection-start-column="35" selection-end-line="513" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/themes/sbadmin2/pages/buttons.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="393" column="32" selection-start-line="393" selection-start-column="32" selection-end-line="393" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/themes/sbadmin2/pages/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3150" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/themes/sbadmin2/pages/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/themes/sbadmin2/pages/forms.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/themes/sbadmin2/pages/buttons.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/themes/sbadmin2/pages/index.html" />
+    <entry file="file://$PROJECT_DIR$/app/templates/themes/sbadmin2/pages/login.html" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1146,12 +935,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#footer#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1176,11 +959,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/migrations/versions/4753d4e00f4e_new_fields_in_user_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-362" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/migrations/versions/4753d4e00f4e_new_fields_in_user_model.py" />
     <entry file="file://$PROJECT_DIR$/app.db">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1193,20 +972,8 @@
     <entry file="file://$PROJECT_DIR$/migrations/alembic.ini">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/migrations/versions/ff220964d55c_users_table.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/migrations/versions/d0b65e803d77_.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/migrations/versions/ff220964d55c_users_table.py" />
+    <entry file="file://$PROJECT_DIR$/migrations/versions/d0b65e803d77_.py" />
     <entry file="file://$PROJECT_DIR$/app/cli.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1221,27 +988,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/auth/routes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1408">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-          <folding>
-            <element signature="e#24#108#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/auth/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="23" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-690">
-          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1259,37 +1009,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2512">
-          <caret line="150" column="31" lean-forward="true" selection-start-line="150" selection-start-column="31" selection-end-line="150" selection-end-column="31" />
-          <folding>
-            <element signature="e#24#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flasky.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding>
-            <element signature="e#24#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1297,8 +1020,70 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
           <caret line="98" column="82" selection-start-line="98" selection-start-column="82" selection-end-line="98" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4560">
+          <caret line="194" column="27" selection-start-line="194" selection-start-column="27" selection-end-line="194" selection-end-column="27" />
           <folding>
-            <element signature="e#24#64#0" expanded="true" />
+            <element signature="e#24#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+          <folding>
+            <element signature="e#24#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/main/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="24" column="58" lean-forward="true" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/auth/routes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/main/routes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="160" column="30" selection-start-line="160" selection-start-column="30" selection-end-line="160" selection-end-column="30" />
+          <folding>
+            <element signature="e#24#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
