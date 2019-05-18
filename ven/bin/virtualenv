@@ -1,5 +1,4 @@
-#!/home/kaori/Desktop/flasky/ven/bin/python
-
+#!/home/kaori/Desktop/flasky/ven/bin/python3.6
 # -*- coding: utf-8 -*-
 import re
 import sys
