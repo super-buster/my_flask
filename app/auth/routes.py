@@ -17,7 +17,7 @@ def login():
         user = User.query.filter_by(username=username).first()
         if user is not None and user.verify_password(password=password):
             login_user(user)
-        else: flash(u'invalid username or password')
+        else: flash(_('invalid username or password'))
         return redirect(url_for('main.index'))
     return render_template('auth/login.html', title=_('Sign In'), **locals())
     # if current_user.is_authenticated:

@@ -96,5 +96,5 @@ def creat_app(config_clas=Config):
 @babel.localeselector
 def get_locale():
     return request.accept_languages.best_match(current_app.config['LANGUAGES'])
-
+    #return 'zh'
 from app import models

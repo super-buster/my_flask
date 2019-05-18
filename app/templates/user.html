@@ -10,7 +10,7 @@
                 {% if user.last_seen %}
                 <p>{{ _('Last seen on') }}: {{ moment(user.last_seen).format('LLL') }}</p>
                 {% endif %}
-                <p>followes: <span class="badge">{{user.followers.count()}}</span> followed: <span class="badge">{{user.followed.count()}}</span></p>
+                <p>{{_('followes')}}: <span class="badge">{{user.followers.count()}}</span> {{_('followed')}}: <span class="badge">{{user.followed.count()}}</span></p>
                 {% if  user.followers.count()%}
                 <span>
                     {% for f in user.followers %}
@@ -18,7 +18,7 @@
                     <a href="{{ url_for('main.user',username=f.username) }}">{{f.username}}</a>
                 </li>
                 {% endfor %}
-                have followed you!
+                {{_('have followed you!')}}
                 </span>
                 {% endif %}
 

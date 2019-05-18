@@ -3,7 +3,7 @@
 
 {% block app_content %}
     <div class="page-header">
-    <h1>Hello, {% if current_user.is_authenticated %}{{ current_user.username }}{% else %}Stranger{% endif %}!</h1>
+    <h1>{{_('Hello')}}, {% if current_user.is_authenticated %}{{ current_user.username }}{% else %}Stranger{% endif %}!</h1>
     </div>
     {% if current_user.can(Permission.WRITE_ARTICLES) %}
         {%if form%}
@@ -37,4 +37,6 @@
 {% block scripts %}
     {{ super() }}
     {{ pagedown.include_pagedown()}}
+    {{ moment.include_moment() }}
+    {{ moment.lang(g.__locale) }}
 {% endblock %}

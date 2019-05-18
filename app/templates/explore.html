@@ -19,7 +19,7 @@
                 <img class="media-object" src="{{ p.author.gravatar(70) }}">
             </a>
             <div class="media-body">
-                <h4 class="media-heading">Post</h4>
+                <h4 class="media-heading">{{_('Post')}}</h4>
                 {% set user_link %}
                 <a href="{{ url_for('main.user', username=p.author.username) }}">
                     {{ p.author.username }}
@@ -33,7 +33,7 @@
                   {% endif %}
               </p>
               <ul class="list-inline list-unstyled">
-                <li><span><i class="glyphicon glyphicon-calendar"></i> {{moment(p.timestamp).fromNow()}} </span></li>
+
                 <li>|</li>
                 <span><i class="glyphicon glyphicon-comment"></i>
                    <a href="{{url_for('main.article',id=p.id)}}" >
@@ -45,10 +45,10 @@
                 {% if current_user == p.author %}
                 <li>|</li>
                 <a href="{{url_for('main.edit',id=p.id)}}" >
-                    <span class="glyphicon glyphicon-pencil">edit</span></a>
+                    <span class="glyphicon glyphicon-pencil">{{_('edit')}}</span></a>
                 {% elif current_user.is_authenticated and current_user.is_administrator() %}
                 <a href="{{ url_for('main.edit', id=p.id) }}">
-                    <span class="label label-danger">Edit [Admin]</span>
+                    <span class="label label-danger">{{_('Edit [Admin]')}}</span>
                 </a>
                 <li>|</li>
                 {% endif %}
@@ -56,10 +56,10 @@
                   {% if current_user == p.author %}
                 <li>|</li>
                 <a href="{{url_for('main.article_delete',id=p.id)}}" >
-                    <span class="glyphicon glyphicon-remove">remove</span></a>
+                    <span class="glyphicon glyphicon-remove">{{_('remove')}}</span></a>
                 {% elif current_user.is_authenticated and current_user.is_administrator() %}
                 <a href="{{ url_for('main.article_delete', id=p.id) }}">
-                    <span class="label label-danger">Delete [Admin]</span>
+                    <span class="label label-danger">{{_('Delete [Admin]')}}</span>
                 </a>
                 <li>|</li>
                 {% endif %}
@@ -73,6 +73,7 @@
                             <span class="glyphicon glyphicon-star"></span>
                             <span class="glyphicon glyphicon-star-empty"></span>
                 </li>
+                  <li><span><i class="glyphicon glyphicon-calendar"></i> {{moment(p.timestamp).calendar()}} </span></li>
                 <li>|</li>
                 <li>
                 <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->

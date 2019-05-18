@@ -24,7 +24,7 @@ class EditProfileForm(FlaskForm):
         if username.data!=self.original_username:
             user=User.query.filter_by(username=self.username.data).first
             if user is not None:
-                raise ValidationError(_('Please use a different username'))
+                raise ValidationError(_l('Please use a different username'))
 
 class PostForm(FlaskForm):
     post=PageDownField(_l("What's your mind? (markdown support)"),validators=[DataRequired()])
@@ -32,7 +32,7 @@ class PostForm(FlaskForm):
 
 class CommentForm(FlaskForm):
     body=PageDownField('',validators=[DataRequired()])
-    submit=SubmitField('Submit')
+    submit=SubmitField(_l('Submit'))
 
 class SearchForm(FlaskForm):
     q = StringField(_l('Search'), validators=[DataRequired()])

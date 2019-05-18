@@ -38,7 +38,7 @@ def index():
         page, current_app.config['POSTS_PER_PAGE'], False)
     next_url=url_for('main.index',page=posts.next_num) if posts.has_next else None
     prev_url=url_for('main.index',page=posts.prev_num) if posts.has_prev else None
-    return render_template('index.html', title='Home page', form=form, posts=posts.items,
+    return render_template('index.html', title=_('Home page'), form=form, posts=posts.items,
                            next_url=next_url,prev_url=prev_url)
 
 
@@ -67,7 +67,7 @@ def edit_profile():
     elif request.method  == 'GET':
         form.username.data=current_user.username
         form.about_me.data=current_user.about_me
-    return render_template('edit_profile.html',title='Edit Profile',form=form)
+    return render_template('edit_profile.html',title=_('Edit Profile'),form=form)
 
 @bp.route('/follow/<username>')
 @login_required
@@ -121,7 +121,7 @@ def edit(id):
         post.body=form.post.data
         db.session.add(post)
         db.session.commit()
-        flash('The post has been rewrited')
+        flash(_('The post has been rewrited'))
         return redirect(url_for('main.articles',id=post.id))
     form.post.data=post.body
     return render_template('edit_post.html',form=form)
@@ -137,7 +137,7 @@ def article(id):
                           author=current_user._get_current_object())
         db.session.add(comment)
         db.session.commit()
-        flash('Your comment has been published.')
+        flash(_('Your comment has been published.'))
         return redirect(url_for('main.article',id=id))
     return render_template('post.html',p=p,id=id,form=form)
 
@@ -149,7 +149,7 @@ def article_delete(id):
     for comment in post.comments:
         db.session.delete(comment)
         db.session.commit()
-    flash('the blog and comments have been deleted')
+    flash(_('the blog and comments have been deleted'))
     return redirect(url_for('main.articles'))
 
 @bp.route('/search')
@@ -162,7 +162,7 @@ def search():
                                current_app.config['POSTS_PER_PAGE'])
     posts = posts.order_by(Post.timestamp.desc())
     if  not len(posts.all()):
-        flash("No matches")
+        flash(_('No matches'))
         return redirect(url_for('main.articles'))
     else:
         next_url = url_for('main.search', q=g.search_form.q.data, page=page + 1) \
@@ -183,4 +183,4 @@ def translate_text():
 @bp.route('/secret')
 @login_required
 def secret():
-    return 'Only authenticated users are allowed'
+    return _('Only authenticated users are allowed')

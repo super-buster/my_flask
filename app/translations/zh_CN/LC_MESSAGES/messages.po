@@ -1,0 +1,384 @@
+# Chinese (Simplified, China) translations for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-05-18 16:44+0800\n"
+"PO-Revision-Date: 2018-12-07 11:44+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_Hans_CN\n"
+"Language-Team: zh_Hans_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: app/__init__.py:24
+msgid "Please log in to access this page."
+msgstr "请先登录以访问此页面"
+
+#: app/translate.py:10
+msgid "Error: the translation service is not configured."
+msgstr "错误：翻译服务还没有被配置"
+
+#: app/translate.py:17
+msgid "Error: the translation service failed."
+msgstr "错误：翻译启动失败"
+
+#: app/auth/email.py:8 app/templates/auth/reset_password.html:5
+msgid "Reset Your Password"
+msgstr "重置你的密码"
+
+#: app/auth/forms.py:9
+msgid "What is your Username?"
+msgstr "用户名？"
+
+#: app/auth/forms.py:10 app/auth/forms.py:20 app/auth/forms.py:55
+msgid "Password"
+msgstr "密码？"
+
+#: app/auth/forms.py:11 app/templates/auth/login.html:40
+msgid "Remember Me"
+msgstr "记住我"
+
+#: app/auth/forms.py:12 app/auth/routes.py:22
+msgid "Sign In"
+msgstr "登录"
+
+#: app/auth/forms.py:15 app/auth/forms.py:51
+msgid "Email"
+msgstr "电子邮件"
+
+#: app/auth/forms.py:16 app/auth/forms.py:35 app/main/forms.py:11
+msgid "Username"
+msgstr "用户名"
+
+#: app/auth/forms.py:22
+msgid "Confirm password"
+msgstr "确认密码"
+
+#: app/auth/forms.py:23 app/templates/auth/register.html:5
+msgid "Register"
+msgstr "注册"
+
+#: app/auth/forms.py:27
+msgid "Email alread registered!"
+msgstr "邮箱已经存在！"
+
+#: app/auth/forms.py:31
+msgid "Username alread in use!"
+msgstr "用户名已经存在！"
+
+#: app/auth/forms.py:39 app/main/forms.py:15
+msgid "About me"
+msgstr "关于我"
+
+#: app/auth/forms.py:40 app/main/forms.py:16 app/main/forms.py:31
+#: app/main/forms.py:35
+msgid "Submit"
+msgstr "提交"
+
+#: app/auth/forms.py:47 app/main/forms.py:27
+msgid "Please use a different username"
+msgstr "请使用不同的用户名"
+
+#: app/auth/forms.py:52 app/auth/forms.py:57
+msgid "Request Password Reset"
+msgstr "请求重置密码"
+
+#: app/auth/forms.py:56
+msgid "Confirm Password"
+msgstr "确认密码"
+
+#: app/auth/routes.py:20
+msgid "invalid username or password"
+msgstr "不合法的用户名或密码"
+
+#: app/auth/routes.py:41
+msgid "You have been logged out."
+msgstr "你已经退出登录"
+
+#: app/auth/routes.py:55
+msgid "You can now login."
+msgstr "你现在可以登录了"
+
+#: app/auth/routes.py:68
+msgid "Check your email for the instructions to reset your password"
+msgstr "请检查你的邮件，按照上面指示来重置密码"
+
+#: app/auth/routes.py:71 app/templates/auth/reset_password_request.html:5
+msgid "Reset Password"
+msgstr "重置密码"
+
+#: app/auth/routes.py:84
+msgid "Your password has been reset."
+msgstr "你的密码已被重置"
+
+#: app/main/forms.py:30
+msgid "What's your mind? (markdown support)"
+msgstr "说点什么吧（支持markdown语法）"
+
+#: app/main/forms.py:38 app/main/routes.py:172
+msgid "Search"
+msgstr "搜索"
+
+#: app/main/routes.py:34
+msgid "You post is now live!"
+msgstr "你的动态已发表"
+
+#: app/main/routes.py:41
+msgid "Home page"
+msgstr "主页"
+
+#: app/main/routes.py:65
+msgid "You changes have been saved"
+msgstr "修改已被保存"
+
+#: app/main/routes.py:70 app/templates/edit_profile.html:5
+msgid "Edit Profile"
+msgstr "编辑资料"
+
+#: app/main/routes.py:77
+#, python-format
+msgid "User %(username)s is not found."
+msgstr "用户 %(username)s 没有找到"
+
+#: app/main/routes.py:80
+msgid "You can not follow yourself!"
+msgstr "你不能关注自己"
+
+#: app/main/routes.py:84
+#, python-format
+msgid "You are following %(username)s!"
+msgstr "你现在是用户%(username)s的粉丝了"
+
+#: app/main/routes.py:92
+#, python-format
+msgid "User %(username)s not found."
+msgstr "用户%(username)s没有找到"
+
+#: app/main/routes.py:95
+msgid "You cannot unfollow youself!"
+msgstr "你不能取关你自己"
+
+#: app/main/routes.py:99
+#, python-format
+msgid "You are not following %(username)s."
+msgstr "你取关了用户%(username)s"
+
+#: app/main/routes.py:124
+msgid "The post has been rewrited"
+msgstr "文章成功被发布"
+
+#: app/main/routes.py:140
+msgid "Your comment has been published."
+msgstr "你的评论已成功提交"
+
+#: app/main/routes.py:152
+msgid "the blog and comments have been deleted"
+msgstr "已移除此博客以及评论"
+
+#: app/main/routes.py:165
+msgid "No matches"
+msgstr "没有找到你想要的，换个关键字吧"
+
+#: app/main/routes.py:186
+msgid "Only authenticated users are allowed"
+msgstr "只有管理员才能看到这个页面"
+
+#: app/templates/_comments.html:8
+msgid "comment in:"
+msgstr "评论时间："
+
+#: app/templates/_post.html:7
+msgid "Post"
+msgstr "发布"
+
+#: app/templates/_post.html:12
+#, python-format
+msgid "%(username)s"
+msgstr "%(username)s"
+
+#: app/templates/_post.html:25
+#, python-format
+msgid "%(count)d comments"
+msgstr "%(count)d 条评论"
+
+#: app/templates/_post.html:33
+msgid "edit"
+msgstr "编辑"
+
+#: app/templates/_post.html:36
+msgid "Edit [Admin]"
+msgstr "编辑(管理员模式)"
+
+#: app/templates/_post.html:44
+msgid "remove"
+msgstr "删除"
+
+#: app/templates/_post.html:47
+msgid "Delete [Admin]"
+msgstr "删除(管理员模式)"
+
+#: app/templates/base.html:28
+msgid "Microblog"
+msgstr "博客"
+
+#: app/templates/base.html:33
+msgid "Home"
+msgstr "主页"
+
+#: app/templates/base.html:34
+msgid "Articles"
+msgstr "探索"
+
+#: app/templates/base.html:36
+msgid "Themes"
+msgstr "主题"
+
+#: app/templates/base.html:70
+msgid "Login"
+msgstr "登录"
+
+#: app/templates/base.html:72
+msgid "Profile"
+msgstr "我的资料"
+
+#: app/templates/base.html:73
+msgid "Logout"
+msgstr "退出登录"
+
+#: app/templates/edit_post.html:5
+msgid "Edit Post"
+msgstr "编辑"
+
+#: app/templates/index.html:6
+msgid "Hello"
+msgstr "你好"
+
+#: app/templates/index.html:22 app/templates/search.html:25
+#: app/templates/user.html:42
+msgid "Newer posts"
+msgstr "上一页"
+
+#: app/templates/index.html:27 app/templates/search.html:30
+#: app/templates/user.html:47
+msgid "Older posts"
+msgstr "下一页"
+
+#: app/templates/user.html:8
+msgid "User"
+msgstr "用户"
+
+#: app/templates/user.html:11
+msgid "Last seen on"
+msgstr "上次登录时间"
+
+#: app/templates/user.html:13
+msgid "followes"
+msgstr "粉丝"
+
+#: app/templates/user.html:13
+msgid "followed"
+msgstr "关注的人"
+
+#: app/templates/user.html:21
+msgid "have followed you!"
+msgstr "以上用户关注了你"
+
+#: app/templates/user.html:26
+msgid "Edit your profile"
+msgstr "编辑资料"
+
+#: app/templates/user.html:28
+msgid "Follow"
+msgstr "关注"
+
+#: app/templates/user.html:30
+msgid "Unfollow"
+msgstr "取关"
+
+#: app/templates/auth/login.html:11
+msgid "Welcome To Your Blog"
+msgstr "欢迎来到你的博客"
+
+#: app/templates/auth/login.html:27
+msgid "Please Sign In"
+msgstr "请先登录"
+
+#: app/templates/auth/login.html:44
+msgid "Log In"
+msgstr "登录"
+
+#: app/templates/auth/login.html:46
+msgid "New User?"
+msgstr "没有帐号？"
+
+#: app/templates/auth/login.html:46
+msgid "Click to Register!"
+msgstr "注册"
+
+#: app/templates/auth/login.html:48
+msgid "Forgot Your Password?"
+msgstr "忘记密码？"
+
+#: app/templates/auth/login.html:49
+msgid "Click to Reset It"
+msgstr "重置密码"
+
+#: app/templates/errors/403.html:7
+msgid "Forbidden"
+msgstr "你没有权利这么做"
+
+#: app/templates/errors/403.html:9 app/templates/errors/404.html:5
+#: app/templates/errors/500.html:6
+msgid "Back"
+msgstr "返回"
+
+#: app/templates/errors/404.html:4
+msgid "File Not Found"
+msgstr "页面不存在"
+
+#: app/templates/errors/500.html:4
+msgid "An unexpected error has occurred"
+msgstr "一个错误发生"
+
+#: app/templates/errors/500.html:5
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr "我们已经通知了管理员，如有不便，敬请谅解"
+
+#~ msgid "password2"
+#~ msgstr "重复密码"
+
+#~ msgid "Say something"
+#~ msgstr "写点什么"
+
+#~ msgid "Invalid username or password"
+#~ msgstr "错误的用户名或密码"
+
+#~ msgid "%(username)s said %(when)s"
+#~ msgstr "用户%(username)s 在 %(when)s 发布"
+
+#~ msgid "Welcome to Microblog"
+#~ msgstr "欢迎来到我的博客"
+
+#~ msgid "Home"
+#~ msgstr "主页"
+
+#~ msgid "Explore"
+#~ msgstr "更多动态"
+
+#~ msgid "Hi, %(username)s!"
+#~ msgstr "你好，%(username)s"
+
+#~ msgid "%(count)d followers"
+#~ msgstr "%(count)d 个粉丝"
+
+#~ msgid "%(count)d following"
+#~ msgstr "%(count)d 个关注"
+

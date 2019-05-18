@@ -15,7 +15,7 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
         'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    LANGUAGES=['en','es','zh_CN']
+    LANGUAGES=['en','es','zh']
     MS_TRANSLATOR_KEY=os.environ.get('MS_TRANSLATOR_KEY')
     LOG_TO_STDOUT=os.environ.get('LOG_TO_STDOUT')
     ELASTICSEARCH_URL =os.environ.get('ELASTICSEARCH_URL')
