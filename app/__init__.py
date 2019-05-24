@@ -14,6 +14,9 @@ from elasticsearch import Elasticsearch
 import logging
 from logging.handlers import SMTPHandler ,RotatingFileHandler
 import os
+from flask_ckeditor import CKEditor
+from flask_admin import Admin
+from app.admins.models import UserModelView, PostModelView, CommentModelView
 
 bootstrap=Bootstrap()
 db=SQLAlchemy()
@@ -26,9 +29,12 @@ mail=Mail()
 moment=Moment()
 babel=Babel()
 pagedown=PageDown()
+ckeditor=CKEditor()
+admin = Admin(name=_l('Dashboard'),template_mode='bootstrap3')
 
 def creat_app(config_clas=Config):
     app = Flask(__name__,static_url_path='/static')
+
     app.config.from_object(config_clas)
     app.elasticsearch = Elasticsearch([app.config['ELASTICSEARCH_URL']]) \
         if app.config['ELASTICSEARCH_URL'] else None
@@ -40,6 +46,10 @@ def creat_app(config_clas=Config):
     moment.init_app(app)
     babel.init_app(app)
     pagedown.init_app(app)
+    ckeditor.init_app(app)
+    admin.init_app(app)
+
+    from .models import User,Permission,Post,Comment
 
     from app.errors import bp as errors_bp
     app.register_blueprint(errors_bp)
@@ -49,6 +59,13 @@ def creat_app(config_clas=Config):
 
     from app.main import bp as main_bp
     app.register_blueprint(main_bp)
+
+    from app.admins import bp as admins_bp
+    app.register_blueprint(admins_bp)
+
+    admin.add_view(UserModelView(User, db.session, category=_l('People')))
+    admin.add_view(PostModelView(Post, db.session, category=_l('Things')))
+    admin.add_view(CommentModelView(Comment, db.session, category=_l('People')))
 
     if not app.debug and not app.testing:
         if app.config['MAIL_SERVER']:
