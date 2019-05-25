@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-24 23:56+0800\n"
+"POT-Creation-Date: 2019-05-25 11:57+0800\n"
 "PO-Revision-Date: 2018-12-07 11:44+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_Hans_CN\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: app/__init__.py:27
+#: app/__init__.py:26
 msgid "Please log in to access this page."
 msgstr "请先登录以访问此页面"
 
-#: app/__init__.py:33
+#: app/__init__.py:32
 msgid "Dashboard"
 msgstr "控制板"
 
@@ -41,6 +41,10 @@ msgstr "错误：翻译服务还没有被配置"
 #: app/translate.py:17
 msgid "Error: the translation service failed."
 msgstr "错误：翻译启动失败"
+
+#: app/admins/models.py:23
+msgid "YOU CAN NOT DO THAT!"
+msgstr "你没有权利这样做"
 
 #: app/auth/email.py:8 app/templates/auth/reset_password.html:5
 msgid "Reset Your Password"
@@ -135,7 +139,8 @@ msgstr "你的密码已被重置"
 msgid "What's your mind? (markdown support)"
 msgstr "说点什么吧（支持markdown语法）"
 
-#: app/main/forms.py:35
+#: app/main/forms.py:35 app/templates/_post.html:7
+#: app/templates/explore.html:22
 msgid "Title"
 msgstr "标题"
 
@@ -143,77 +148,103 @@ msgstr "标题"
 msgid "Say something..."
 msgstr "说点什么吧"
 
-#: app/main/forms.py:44 app/main/routes.py:172
+#: app/main/forms.py:44 app/main/routes.py:174
 msgid "Search"
 msgstr "搜索"
 
-#: app/main/routes.py:34
+#: app/main/routes.py:36
 msgid "You post is now live!"
 msgstr "你的动态已发表"
 
-#: app/main/routes.py:41
+#: app/main/routes.py:43
 msgid "Home page"
 msgstr "主页"
 
-#: app/main/routes.py:65
+#: app/main/routes.py:67
 msgid "You changes have been saved"
 msgstr "修改已被保存"
 
-#: app/main/routes.py:70 app/templates/edit_profile.html:5
+#: app/main/routes.py:72 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "编辑资料"
 
-#: app/main/routes.py:77
+#: app/main/routes.py:79
 #, python-format
 msgid "User %(username)s is not found."
 msgstr "用户 %(username)s 没有找到"
 
-#: app/main/routes.py:80
+#: app/main/routes.py:82
 msgid "You can not follow yourself!"
 msgstr "你不能关注自己"
 
-#: app/main/routes.py:84
+#: app/main/routes.py:86
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "你现在是用户%(username)s的粉丝了"
 
-#: app/main/routes.py:92
+#: app/main/routes.py:94
 #, python-format
 msgid "User %(username)s not found."
 msgstr "用户%(username)s没有找到"
 
-#: app/main/routes.py:95
+#: app/main/routes.py:97
 msgid "You cannot unfollow youself!"
 msgstr "你不能取关你自己"
 
-#: app/main/routes.py:99
+#: app/main/routes.py:101
 #, python-format
 msgid "You are not following %(username)s."
 msgstr "你取关了用户%(username)s"
 
-#: app/main/routes.py:124
+#: app/main/routes.py:126
 msgid "The post has been rewrited"
 msgstr "文章成功被发布"
 
-#: app/main/routes.py:140
+#: app/main/routes.py:142
 msgid "Your comment has been published."
 msgstr "你的评论已成功提交"
 
-#: app/main/routes.py:152
+#: app/main/routes.py:154
 msgid "the blog and comments have been deleted"
 msgstr "已移除此博客以及评论"
 
-#: app/main/routes.py:165
+#: app/main/routes.py:167
 msgid "No matches"
 msgstr "没有找到你想要的，换个关键字吧"
 
-#: app/main/routes.py:186
+#: app/main/routes.py:189
 msgid "Only authenticated users are allowed"
 msgstr "只有管理员才能看到这个页面"
 
 #: app/templates/_comments.html:8
 msgid "comment in:"
 msgstr "评论时间："
+
+#: app/templates/_post.html:12 app/templates/explore.html:27
+#, python-format
+msgid "%(username)s"
+msgstr "%(username)s"
+
+#: app/templates/_post.html:25 app/templates/explore.html:40
+#, python-format
+msgid "%(count)d comments"
+msgstr "%(count)d 条评论"
+
+#: app/templates/_post.html:33 app/templates/explore.html:48
+msgid "edit"
+msgstr "编辑"
+
+#: app/templates/_post.html:36 app/templates/explore.html:51
+msgid "Edit [Admin]"
+msgstr "编辑(管理员模式)"
+
+#: app/templates/_post.html:44 app/templates/explore.html:59
+msgid "remove"
+msgstr "删除"
+
+#: app/templates/_post.html:47 app/templates/explore.html:62
+msgid "Delete [Admin]"
+msgstr "删除(管理员模式)"
 
 #: app/templates/base.html:28
 msgid "Microblog"
@@ -246,36 +277,6 @@ msgstr "退出登录"
 #: app/templates/edit_post.html:5
 msgid "Edit Post"
 msgstr "编辑"
-
-#: app/templates/explore.html:22
-msgid "Post"
-msgstr "发布"
-
-#: app/templates/explore.html:27
-#, python-format
-msgid "%(username)s"
-msgstr "%(username)s"
-
-#: app/templates/explore.html:40
-#, python-format
-msgid "%(count)d comments"
-msgstr "%(count)d 条评论"
-
-#: app/templates/explore.html:48
-msgid "edit"
-msgstr "编辑"
-
-#: app/templates/explore.html:51
-msgid "Edit [Admin]"
-msgstr "编辑(管理员模式)"
-
-#: app/templates/explore.html:59
-msgid "remove"
-msgstr "删除"
-
-#: app/templates/explore.html:62
-msgid "Delete [Admin]"
-msgstr "删除(管理员模式)"
 
 #: app/templates/explore.html:94 app/templates/index.html:29
 #: app/templates/search.html:25 app/templates/user.html:42
@@ -323,6 +324,25 @@ msgstr "关注"
 msgid "Unfollow"
 msgstr "取关"
 
+#: app/templates/admin/index.html:8
+msgid "Flask-Admin example"
+msgstr "Flask-Admin 实例"
+
+#: app/templates/admin/index.html:10
+msgid "Authentication"
+msgstr "认证"
+
+#: app/templates/admin/index.html:13
+msgid ""
+"This example shows how you can use Flask-Login for authentication. It is "
+"only intended as a basic demonstration."
+msgstr "这个例子展示了如何使用Admin来认证用户"
+
+#: app/templates/admin/index.html:37 app/templates/errors/403.html:9
+#: app/templates/errors/404.html:5 app/templates/errors/500.html:6
+msgid "Back"
+msgstr "返回"
+
 #: app/templates/auth/login.html:11
 msgid "Welcome To Your Blog"
 msgstr "欢迎来到你的博客"
@@ -354,11 +374,6 @@ msgstr "重置密码"
 #: app/templates/errors/403.html:7
 msgid "Forbidden"
 msgstr "你没有权利这么做"
-
-#: app/templates/errors/403.html:9 app/templates/errors/404.html:5
-#: app/templates/errors/500.html:6
-msgid "Back"
-msgstr "返回"
 
 #: app/templates/errors/404.html:4
 msgid "File Not Found"
@@ -401,4 +416,7 @@ msgstr "我们已经通知了管理员，如有不便，敬请谅解"
 
 #~ msgid "%(count)d following"
 #~ msgstr "%(count)d 个关注"
+
+#~ msgid "Post"
+#~ msgstr "发布"
 

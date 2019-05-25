@@ -2,9 +2,9 @@
 
 <head>
 <% block head%>
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="{{ url_for('static/bootstrap-3.4.1-dist/css/',filename='bootstrap.min.css') }}" rel="stylesheet" id="bootstrap-css">
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <% endblock %>
 </head>
@@ -19,7 +19,7 @@
                 <img class="media-object" src="{{ p.author.gravatar(70) }}">
             </a>
             <div class="media-body">
-                <h4 class="media-heading">{{_('Post')}}</h4>
+                <h4 class="media-heading">{{_('Title')}} : {{p.title}}</h4>
                 {% set user_link %}
                 <a href="{{ url_for('main.user', username=p.author.username) }}">
                     {{ p.author.username }}

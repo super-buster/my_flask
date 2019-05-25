@@ -10,6 +10,8 @@ from app.main.forms import EditProfileForm,PostForm,CommentForm,SearchForm,RichP
 from app.models import User,Post,Permission,Role,Comment
 from app.translate import translate
 from app.main import bp
+from ..decorators import admin_required
+
 #动态获取用户登录的最后时间
 @bp.before_request
 def before_request():
@@ -180,7 +182,8 @@ def translate_text():
                                       request.form['source_language'],
                                       request.form['dest_language'])})
 
-@bp.route('/secret')
+@bp.route('/secret',methods=['GET'])
 @login_required
+@admin_required
 def secret():
     return _('Only authenticated users are allowed')

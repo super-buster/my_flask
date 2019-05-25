@@ -1,20 +1,27 @@
 # -*- coding: utf-8 -*-
-from flask_login import current_user
+from flask_login import current_user,login_required
 from flask_admin.contrib.sqla import ModelView
 from flask_admin import AdminIndexView,expose
-from flask import redirect,url_for
+from flask import redirect,url_for,flash
+from flask_babel import _
 
 class MyModelView(ModelView):
     def is_accessible(self):
-        return current_user.is_authenticated  #not method now!!
+        return (current_user.is_active and
+                current_user.is_authenticated
+        )   #not method now!!
 
 class MyAdminIndexView(AdminIndexView):
     @expose('/')
+    @login_required
     def index(self):
         if not current_user.is_authenticated:
             return redirect(url_for('auth.login'))
-        return super(MyAdminIndexView, self).index()
-
+        if current_user.is_administrator():
+            return super(MyAdminIndexView, self).index()
+        else:
+            flash(_('YOU CAN NOT DO THAT!'))
+            return redirect(url_for('main.index'))
 
 class UserModelView(MyModelView,ModelView):
     page_size = 50

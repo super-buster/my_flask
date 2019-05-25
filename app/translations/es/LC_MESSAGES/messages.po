@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-24 23:56+0800\n"
+"POT-Creation-Date: 2019-05-25 11:57+0800\n"
 "PO-Revision-Date: 2018-12-07 10:01+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: app/__init__.py:27
+#: app/__init__.py:26
 msgid "Please log in to access this page."
 msgstr "Por favor ingrese para acceder a esta página."
 
-#: app/__init__.py:33
+#: app/__init__.py:32
 msgid "Dashboard"
 msgstr ""
 
@@ -40,6 +40,10 @@ msgstr ""
 
 #: app/translate.py:17
 msgid "Error: the translation service failed."
+msgstr ""
+
+#: app/admins/models.py:23
+msgid "YOU CAN NOT DO THAT!"
 msgstr ""
 
 #: app/auth/email.py:8 app/templates/auth/reset_password.html:5
@@ -135,7 +139,8 @@ msgstr ""
 msgid "What's your mind? (markdown support)"
 msgstr ""
 
-#: app/main/forms.py:35
+#: app/main/forms.py:35 app/templates/_post.html:7
+#: app/templates/explore.html:22
 msgid "Title"
 msgstr ""
 
@@ -143,76 +148,102 @@ msgstr ""
 msgid "Say something..."
 msgstr ""
 
-#: app/main/forms.py:44 app/main/routes.py:172
+#: app/main/forms.py:44 app/main/routes.py:174
 msgid "Search"
 msgstr ""
 
-#: app/main/routes.py:34
+#: app/main/routes.py:36
 msgid "You post is now live!"
 msgstr "¡Tu artículo ha sido publicado!"
 
-#: app/main/routes.py:41
+#: app/main/routes.py:43
 msgid "Home page"
 msgstr ""
 
-#: app/main/routes.py:65
+#: app/main/routes.py:67
 msgid "You changes have been saved"
 msgstr "Tus cambios han sido salvados."
 
-#: app/main/routes.py:70 app/templates/edit_profile.html:5
+#: app/main/routes.py:72 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "Editar perfil"
 
-#: app/main/routes.py:77
+#: app/main/routes.py:79
 #, python-format
 msgid "User %(username)s is not found."
 msgstr "El usuario %(username)s no ha sido encontrado."
 
-#: app/main/routes.py:80
+#: app/main/routes.py:82
 msgid "You can not follow yourself!"
 msgstr "¡No te puedes seguir a tí mismo!"
 
-#: app/main/routes.py:84
+#: app/main/routes.py:86
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "¡Ahora estás siguiendo a %(username)s!"
 
-#: app/main/routes.py:92
+#: app/main/routes.py:94
 #, python-format
 msgid "User %(username)s not found."
 msgstr "El usuario %(username)s no ha sido encontrado."
 
-#: app/main/routes.py:95
+#: app/main/routes.py:97
 msgid "You cannot unfollow youself!"
 msgstr "¡No te puedes dejar de seguir a tí mismo!"
 
-#: app/main/routes.py:99
+#: app/main/routes.py:101
 #, python-format
 msgid "You are not following %(username)s."
 msgstr "No estás siguiendo a %(username)s."
 
-#: app/main/routes.py:124
+#: app/main/routes.py:126
 msgid "The post has been rewrited"
 msgstr ""
 
-#: app/main/routes.py:140
+#: app/main/routes.py:142
 msgid "Your comment has been published."
 msgstr ""
 
-#: app/main/routes.py:152
+#: app/main/routes.py:154
 msgid "the blog and comments have been deleted"
 msgstr ""
 
-#: app/main/routes.py:165
+#: app/main/routes.py:167
 msgid "No matches"
 msgstr ""
 
-#: app/main/routes.py:186
+#: app/main/routes.py:189
 msgid "Only authenticated users are allowed"
 msgstr ""
 
 #: app/templates/_comments.html:8
 msgid "comment in:"
+msgstr ""
+
+#: app/templates/_post.html:12 app/templates/explore.html:27
+#, python-format
+msgid "%(username)s"
+msgstr ""
+
+#: app/templates/_post.html:25 app/templates/explore.html:40
+#, python-format
+msgid "%(count)d comments"
+msgstr ""
+
+#: app/templates/_post.html:33 app/templates/explore.html:48
+msgid "edit"
+msgstr ""
+
+#: app/templates/_post.html:36 app/templates/explore.html:51
+msgid "Edit [Admin]"
+msgstr ""
+
+#: app/templates/_post.html:44 app/templates/explore.html:59
+msgid "remove"
+msgstr ""
+
+#: app/templates/_post.html:47 app/templates/explore.html:62
+msgid "Delete [Admin]"
 msgstr ""
 
 #: app/templates/base.html:28
@@ -245,36 +276,6 @@ msgstr "Salir"
 
 #: app/templates/edit_post.html:5
 msgid "Edit Post"
-msgstr ""
-
-#: app/templates/explore.html:22
-msgid "Post"
-msgstr ""
-
-#: app/templates/explore.html:27
-#, python-format
-msgid "%(username)s"
-msgstr ""
-
-#: app/templates/explore.html:40
-#, python-format
-msgid "%(count)d comments"
-msgstr ""
-
-#: app/templates/explore.html:48
-msgid "edit"
-msgstr ""
-
-#: app/templates/explore.html:51
-msgid "Edit [Admin]"
-msgstr ""
-
-#: app/templates/explore.html:59
-msgid "remove"
-msgstr ""
-
-#: app/templates/explore.html:62
-msgid "Delete [Admin]"
 msgstr ""
 
 #: app/templates/explore.html:94 app/templates/index.html:29
@@ -323,6 +324,25 @@ msgstr "Seguir"
 msgid "Unfollow"
 msgstr "Dejar de seguir"
 
+#: app/templates/admin/index.html:8
+msgid "Flask-Admin example"
+msgstr ""
+
+#: app/templates/admin/index.html:10
+msgid "Authentication"
+msgstr ""
+
+#: app/templates/admin/index.html:13
+msgid ""
+"This example shows how you can use Flask-Login for authentication. It is "
+"only intended as a basic demonstration."
+msgstr ""
+
+#: app/templates/admin/index.html:37 app/templates/errors/403.html:9
+#: app/templates/errors/404.html:5 app/templates/errors/500.html:6
+msgid "Back"
+msgstr "Atrás"
+
 #: app/templates/auth/login.html:11
 msgid "Welcome To Your Blog"
 msgstr ""
@@ -354,11 +374,6 @@ msgstr "Haz click aquí para pedir una nueva"
 #: app/templates/errors/403.html:7
 msgid "Forbidden"
 msgstr ""
-
-#: app/templates/errors/403.html:9 app/templates/errors/404.html:5
-#: app/templates/errors/500.html:6
-msgid "Back"
-msgstr "Atrás"
 
 #: app/templates/errors/404.html:4
 msgid "File Not Found"
@@ -401,4 +416,7 @@ msgstr "El administrador ha sido notificado. ¡Lamentamos la inconveniencia!"
 
 #~ msgid "%(count)d following"
 #~ msgstr "siguiendo a %(count)d"
+
+#~ msgid "Post"
+#~ msgstr ""
 
