@@ -7,7 +7,14 @@
     </div>
     {% if current_user.can(Permission.WRITE_ARTICLES) %}
         {%if form%}
-            {{ wtf.quick_form(form) }}
+            <form method="POST">
+            {{ form.title.label }}<br>{{ form.title() }}
+                <br>
+            {{ form.body.label }}{{ form.body() }}
+            {{ form.submit() }}
+            </form>
+            {{ ckeditor.load() }}
+            {{ ckeditor.config(name='body',width=800,height=100,enable_markdown=true) }}
         {% endif %}
     {% endif %}
     <br>

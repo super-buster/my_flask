@@ -6,6 +6,7 @@ from wtforms import StringField, SubmitField, TextAreaField
 from wtforms.validators import  DataRequired, ValidationError,Length,Regexp
 from flask_babel import _,lazy_gettext as _l
 from app.models import  User
+from flask_ckeditor import CKEditorField
 
 class EditProfileForm(FlaskForm):
     username=StringField(_l('Username'),validators=[
@@ -29,6 +30,11 @@ class EditProfileForm(FlaskForm):
 class PostForm(FlaskForm):
     post=PageDownField(_l("What's your mind? (markdown support)"),validators=[DataRequired()])
     submit=SubmitField(_l('Submit'))
+
+class RichPostForm(FlaskForm):
+    title=StringField(_l("Title"),validators=[DataRequired()])
+    body = CKEditorField(_l("Say something..."), validators=[DataRequired()])
+    submit = SubmitField(_l('Submit'))
 
 class CommentForm(FlaskForm):
     body=PageDownField('',validators=[DataRequired()])

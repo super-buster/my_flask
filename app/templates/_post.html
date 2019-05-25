@@ -4,7 +4,7 @@
             <img class="media-object" src="{{ p.author.gravatar(70) }}">
         </a>
         <div class="media-body">
-            <h4 class="media-heading">{{_('Post')}}</h4>
+            <h4 class="media-heading">{{_('Title')}} : {{p.title}}</h4>
             {% set user_link %}
             <a href="{{ url_for('main.user', username=p.author.username) }}">
                 {{ p.author.username }}

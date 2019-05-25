@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-18 16:44+0800\n"
+"POT-Creation-Date: 2019-05-24 23:56+0800\n"
 "PO-Revision-Date: 2018-12-07 11:44+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_Hans_CN\n"
@@ -18,9 +18,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: app/__init__.py:24
+#: app/__init__.py:27
 msgid "Please log in to access this page."
 msgstr "请先登录以访问此页面"
+
+#: app/__init__.py:33
+msgid "Dashboard"
+msgstr "控制板"
+
+#: app/__init__.py:66
+msgid "People"
+msgstr "人"
+
+#: app/__init__.py:67 app/__init__.py:68
+msgid "Things"
+msgstr "物"
 
 #: app/translate.py:10
 msgid "Error: the translation service is not configured."
@@ -54,7 +66,7 @@ msgstr "登录"
 msgid "Email"
 msgstr "电子邮件"
 
-#: app/auth/forms.py:16 app/auth/forms.py:35 app/main/forms.py:11
+#: app/auth/forms.py:16 app/auth/forms.py:35 app/main/forms.py:12
 msgid "Username"
 msgstr "用户名"
 
@@ -74,16 +86,16 @@ msgstr "邮箱已经存在！"
 msgid "Username alread in use!"
 msgstr "用户名已经存在！"
 
-#: app/auth/forms.py:39 app/main/forms.py:15
+#: app/auth/forms.py:39 app/main/forms.py:16
 msgid "About me"
 msgstr "关于我"
 
-#: app/auth/forms.py:40 app/main/forms.py:16 app/main/forms.py:31
-#: app/main/forms.py:35
+#: app/auth/forms.py:40 app/main/forms.py:17 app/main/forms.py:32
+#: app/main/forms.py:37 app/main/forms.py:41
 msgid "Submit"
 msgstr "提交"
 
-#: app/auth/forms.py:47 app/main/forms.py:27
+#: app/auth/forms.py:47 app/main/forms.py:28
 msgid "Please use a different username"
 msgstr "请使用不同的用户名"
 
@@ -119,11 +131,19 @@ msgstr "重置密码"
 msgid "Your password has been reset."
 msgstr "你的密码已被重置"
 
-#: app/main/forms.py:30
+#: app/main/forms.py:31
 msgid "What's your mind? (markdown support)"
 msgstr "说点什么吧（支持markdown语法）"
 
-#: app/main/forms.py:38 app/main/routes.py:172
+#: app/main/forms.py:35
+msgid "Title"
+msgstr "标题"
+
+#: app/main/forms.py:36
+msgid "Say something..."
+msgstr "说点什么吧"
+
+#: app/main/forms.py:44 app/main/routes.py:172
 msgid "Search"
 msgstr "搜索"
 
@@ -195,36 +215,6 @@ msgstr "只有管理员才能看到这个页面"
 msgid "comment in:"
 msgstr "评论时间："
 
-#: app/templates/_post.html:7
-msgid "Post"
-msgstr "发布"
-
-#: app/templates/_post.html:12
-#, python-format
-msgid "%(username)s"
-msgstr "%(username)s"
-
-#: app/templates/_post.html:25
-#, python-format
-msgid "%(count)d comments"
-msgstr "%(count)d 条评论"
-
-#: app/templates/_post.html:33
-msgid "edit"
-msgstr "编辑"
-
-#: app/templates/_post.html:36
-msgid "Edit [Admin]"
-msgstr "编辑(管理员模式)"
-
-#: app/templates/_post.html:44
-msgid "remove"
-msgstr "删除"
-
-#: app/templates/_post.html:47
-msgid "Delete [Admin]"
-msgstr "删除(管理员模式)"
-
 #: app/templates/base.html:28
 msgid "Microblog"
 msgstr "博客"
@@ -257,19 +247,49 @@ msgstr "退出登录"
 msgid "Edit Post"
 msgstr "编辑"
 
-#: app/templates/index.html:6
-msgid "Hello"
-msgstr "你好"
+#: app/templates/explore.html:22
+msgid "Post"
+msgstr "发布"
 
-#: app/templates/index.html:22 app/templates/search.html:25
-#: app/templates/user.html:42
+#: app/templates/explore.html:27
+#, python-format
+msgid "%(username)s"
+msgstr "%(username)s"
+
+#: app/templates/explore.html:40
+#, python-format
+msgid "%(count)d comments"
+msgstr "%(count)d 条评论"
+
+#: app/templates/explore.html:48
+msgid "edit"
+msgstr "编辑"
+
+#: app/templates/explore.html:51
+msgid "Edit [Admin]"
+msgstr "编辑(管理员模式)"
+
+#: app/templates/explore.html:59
+msgid "remove"
+msgstr "删除"
+
+#: app/templates/explore.html:62
+msgid "Delete [Admin]"
+msgstr "删除(管理员模式)"
+
+#: app/templates/explore.html:94 app/templates/index.html:29
+#: app/templates/search.html:25 app/templates/user.html:42
 msgid "Newer posts"
 msgstr "上一页"
 
-#: app/templates/index.html:27 app/templates/search.html:30
-#: app/templates/user.html:47
+#: app/templates/explore.html:99 app/templates/index.html:34
+#: app/templates/search.html:30 app/templates/user.html:47
 msgid "Older posts"
 msgstr "下一页"
+
+#: app/templates/index.html:6
+msgid "Hello"
+msgstr "你好"
 
 #: app/templates/user.html:8
 msgid "User"

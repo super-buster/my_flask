@@ -16,8 +16,7 @@ from logging.handlers import SMTPHandler ,RotatingFileHandler
 import os
 from flask_ckeditor import CKEditor
 from flask_admin import Admin
-from app.admins.models import UserModelView, PostModelView, CommentModelView
-
+from app.admins.models import UserModelView, PostModelView, CommentModelView,MyAdminIndexView
 bootstrap=Bootstrap()
 db=SQLAlchemy()
 migrate=Migrate()
@@ -30,7 +29,8 @@ moment=Moment()
 babel=Babel()
 pagedown=PageDown()
 ckeditor=CKEditor()
-admin = Admin(name=_l('Dashboard'),template_mode='bootstrap3')
+admin = Admin(name=_l('Dashboard'),template_mode='bootstrap3',index_view=MyAdminIndexView())
+
 
 def creat_app(config_clas=Config):
     app = Flask(__name__,static_url_path='/static')
@@ -65,7 +65,7 @@ def creat_app(config_clas=Config):
 
     admin.add_view(UserModelView(User, db.session, category=_l('People')))
     admin.add_view(PostModelView(Post, db.session, category=_l('Things')))
-    admin.add_view(CommentModelView(Comment, db.session, category=_l('People')))
+    admin.add_view(CommentModelView(Comment, db.session, category=_l('Things')))
 
     if not app.debug and not app.testing:
         if app.config['MAIL_SERVER']:
@@ -112,6 +112,6 @@ def creat_app(config_clas=Config):
 
 @babel.localeselector
 def get_locale():
-    return request.accept_languages.best_match(current_app.config['LANGUAGES'])
+     return request.accept_languages.best_match(current_app.config['LANGUAGES'])
     #return 'zh'
 from app import models

@@ -19,3 +19,4 @@ class Config(object):
     MS_TRANSLATOR_KEY=os.environ.get('MS_TRANSLATOR_KEY')
     LOG_TO_STDOUT=os.environ.get('LOG_TO_STDOUT')
     ELASTICSEARCH_URL =os.environ.get('ELASTICSEARCH_URL')
+    BABEL_DEFAULT_LOCALE='zh_CN'

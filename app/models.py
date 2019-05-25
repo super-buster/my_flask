@@ -194,7 +194,7 @@ LoginManager.anonymous_user=AnonymousUser
 
 class Post(SearchableMixin,db.Model):
     __tablename__='post'
-    __searchable__ = ['body']
+    __searchable__ = ['body','title']
     id=db.Column(db.Integer,primary_key=True)
     title=db.Column(db.String(100))
     body=db.Column(db.String(140))

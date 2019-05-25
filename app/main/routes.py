@@ -6,7 +6,7 @@ from flask_login import current_user,login_required
 from flask_babel import _, get_locale
 from guess_language import guess_language
 from app import db
-from app.main.forms import EditProfileForm,PostForm,CommentForm,SearchForm
+from app.main.forms import EditProfileForm,PostForm,CommentForm,SearchForm,RichPostForm
 from app.models import User,Post,Permission,Role,Comment
 from app.translate import translate
 from app.main import bp
@@ -23,12 +23,12 @@ def before_request():
 @bp.route('/index',methods=['GET','POST'])
 @login_required
 def index():
-    form=PostForm()
-    if form.validate_on_submit():
-        language=guess_language(form.post.data)
+    form=RichPostForm()
+    if request.method == 'POST':
+        language=guess_language(form.body.data)
         if language=='UNKNOWN' or len(language)>5:
             language=''
-        post=Post(body=form.post.data,author=current_user,language=language)
+        post=Post(body=form.body.data,title=form.title.data,author=current_user,language=language)
         db.session.add(post)
         db.session.commit()
         flash(_('You post is now live!'))
